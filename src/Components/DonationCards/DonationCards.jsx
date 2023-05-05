@@ -1,30 +1,45 @@
-import {Card, CardHeader, CardBody, CardFooter, Typography, Button} from "@material-tailwind/react";
 import './DonationCards.css';
-
+import Bus from '../../Assets/Pictures/Bus.png';
+import SchoolBuilding from '../../Assets/Pictures/School.png';
+import SchoolMaterial from '../../Assets/Pictures/School Material.png';
+import Help from '../../Assets/Pictures/Help.png';
+import { Card, CardHeader, CardBody, Typography } from "@material-tailwind/react";
 
 export default function DonationCards() {
     return (
-
-        <Card className="mt-6 w-96">
-            
-            <CardBody>
-                <Typography variant="h5" color="blue-gray" className="mb-2">
-                    UI/UX Review Check
-                </Typography>
-                <Typography>
-                    The place is close to Barceloneta Beach and bus stop just 2 min by walk
-                    and near to &quot;Naviglio&quot; where you can enjoy the main night life
-                    in Barcelona.
-                </Typography>
-            </CardBody>
-            <CardHeader color="blue-gray" className="relative h-56">
-                <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="img-blur-shadow" layout="fill" />
-            </CardHeader>
-            <CardFooter className="pt-0">
-                <Button>Read More</Button>
-            </CardFooter>
-            
-        </Card>
-
+        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", marginTop: "5px", gap: "20px" }}>
+            <Card className="mt-6 w-64 rounded-tr-lg rounded-bl-lg border-solid border border-black" >
+                <CardBody>
+                    <Typography variant="h5" color="blue-gray" className="mb-2" style={{ textAlign: "center" }}>
+                        Compra KM
+                    </Typography>
+                </CardBody>
+                <img src={Bus} alt="Bus" style={{width: "111px", height: "111px", margin: "auto"}} />
+            </Card>
+            <Card className="mt-6 w-64 rounded-tr-lg rounded-bl-lg border-solid border border-black">
+                <CardBody>
+                    <Typography variant="h5" color="blue-gray" className="mb-2" style={{ textAlign: "center" }}>
+                        Apadrina una escuela
+                    </Typography>
+                </CardBody>
+                <img src={SchoolBuilding} alt="School" style={{width: "137px", height: "126px", margin: "auto"}} />
+            </Card>
+            <Card className="mt-6 w-64 rounded-tr-lg rounded-bl-lg border-solid border border-black">
+                <CardBody>
+                    <Typography variant="h5" color="blue-gray" className="mb-2" style={{ textAlign: "center" }}>
+                        Material escolar
+                    </Typography>
+                </CardBody>
+                <img src={SchoolMaterial} alt="School Material" style={{width: "78px", height: "125px", margin: "auto"}} />
+            </Card>
+            <Card className="mt-6 w-64 rounded-tr-lg rounded-bl-lg border-solid border border-black">
+                <CardBody>
+                    <Typography variant="h5" color="blue-gray" className="mb-2" style={{ textAlign: "center" }}>
+                        Más ayuda
+                    </Typography>
+                </CardBody>
+                <img src={Help} alt="Help Us" style={{width: "134px", height: "111px", margin: "auto"}} />
+            </Card>
+        </div>
     )
 }
