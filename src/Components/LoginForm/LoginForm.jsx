@@ -1,5 +1,5 @@
 import React from 'react';
-// import AuthService from "../../service/AuthService";
+import AuthService from "../../service/AuthService";
 import { useState } from 'react';
 
 function LoginForm() {
@@ -9,7 +9,7 @@ function LoginForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const credentials = { username, password };
-        //    AuthService.login(username, password);
+        AuthService.login(username, password);
     };
 
     return (
