@@ -6,6 +6,7 @@ import OurTrip from '../../Components/OurTrip/OurTrip'
 export default function HomePage() {
   return (
     <>
+      <NavBar/>
       <DonationCards />
       <WhoAreWe />
       <OurTrip />
