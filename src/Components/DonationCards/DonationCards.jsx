@@ -1,8 +1,8 @@
 import './DonationCards.css';
-import Bus from '../../Assets/Pictures/Bus.png';
-import SchoolBuilding from '../../Assets/Pictures/School.png';
-import SchoolMaterial from '../../Assets/Pictures/School Material.png';
-import Help from '../../Assets/Pictures/Help.png';
+import Bus from '../../Assets/Pictures/Bus.svg';
+import SchoolBuilding from '../../Assets/Pictures/SchoolBuilding.svg';
+import SchoolMaterial from '../../Assets/Pictures/SchoolMaterial.svg';
+import Help from '../../Assets/Pictures/Help.svg';
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 
 
