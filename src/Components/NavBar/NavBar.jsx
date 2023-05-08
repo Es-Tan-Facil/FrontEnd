@@ -34,7 +34,7 @@ export default function NavBar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="#Colabora" className="flex items-center">
           Colabora
         </a>
       </Typography>
@@ -44,7 +44,7 @@ export default function NavBar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="#Quienes somos" className="flex items-center">
           Quiénes somos
         </a>
       </Typography>
@@ -64,7 +64,7 @@ export default function NavBar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="#Nuestro viaje" className="flex items-center">
           Nuestro viaje
         </a>
       </Typography>
