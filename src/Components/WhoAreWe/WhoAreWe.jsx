@@ -2,7 +2,7 @@ import React from 'react'
 import Title from '../Title/Title'
 import Subtitle from '../Subtitle/Subtitle'
 import Text from '../Text/Text'
-import somos from "../../Assets/Pictures/01.png"
+import somos from "../../Assets/Pictures/01.svg"
 
 
 
