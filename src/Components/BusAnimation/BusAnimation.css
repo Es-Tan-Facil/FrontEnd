@@ -1,6 +1,10 @@
+.BusAnimation{
+  width: 100vw;
+}
+
 .BusImg {
-  position: sticky;
-  bottom: 0;
+  position: absolute;
+  bottom: 0px;
   left: 0;
   z-index: 1;
   height: 10vh;
@@ -8,7 +12,9 @@
 }
 .BackgroundImg {
   position: relative;
+  bottom: 0;
   z-index: 0;
+  width: 100%;
 }
 /* 
 @media (max-width: 1280px) {
