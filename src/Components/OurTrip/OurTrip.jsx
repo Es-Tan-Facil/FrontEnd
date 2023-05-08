@@ -1,6 +1,5 @@
 import React from 'react'
 import Title from '../Title/Title'
-import Subtitle from '../Subtitle/Subtitle'
 import Text from '../Text/Text'
 
 export default function OurTrip() {
