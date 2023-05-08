@@ -5,7 +5,7 @@ import Text from '../Text/Text'
 export default function OurTrip() {
     return (
         <div>
-            <div style={{ width: "31rem" }}>
+            <div id='Nuestro viaje' style={{ width: "31rem" }}>
                 <Title title="Nuestro viaje" />
                 <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
                 a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. But also the leap into electronic typesetting, remaining essentially unchanged. 
