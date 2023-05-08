@@ -2,12 +2,16 @@ import React from 'react'
 import Title from '../Title/Title'
 import Subtitle from '../Subtitle/Subtitle'
 import Text from '../Text/Text'
+import somos from "../../Assets/Pictures/01.svg"
+
+
 
 export default function WhoAreWe() {
     return (
-        <div id='Quienes somos'>
-            <div>
-                <img src="" alt="" />
+        <div style={{display: "flex", justifyContent:"center"}}>
+            <div style={{ width:"550px"}}>
+           
+                <img src={somos} alt="imagen" />
             </div>
             <div style={{ width: "31rem" }}>
                 <Subtitle subtitle="Es Tan Fácil" />
