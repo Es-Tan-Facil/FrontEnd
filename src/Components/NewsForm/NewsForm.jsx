@@ -1,0 +1,53 @@
+import React, { useState } from 'react';
+import HTTPService from '../../Services/HTTPService'
+import InputPhoto from '../InputPhoto'
+import { Link } from "react-router-dom";
+
+
+
+function NewsForm() {
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [urlImg, setUrlImg] = useState("");
+
+    const handleSubmit = (event) => {
+        const data = {
+            name: title,
+            description: description,
+            urlImg: urlImg
+
+        }
+
+        HTTPService().createData(data)
+    }
+
+    return (
+
+        <div className="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <h2 className="text-xl mb-4 font-bold">COMPARTIR EXPERIENCIA</h2>
+            <form>
+                <div className="mb-4">
+                    <label className="block text-gray-700 font-bold mb-2" htmlFor="title">Título</label>
+                    <input onChange={(event) => { setTitle(event.target.value) }} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Ingresa el título" autoFocus />
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-700 font-bold mb-2" htmlFor="description">Descripción</label>
+                    <textarea onChange={(event) => { setDescription(event.target.value) }}
+                        rows={7} p className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="description" placeholder="Cuéntanos tu experiencia..." />
+                </div>
+                <div className="mb-4">
+                    <InputPhoto setUrlImg={setUrlImg} />
+                </div>
+                <div className="mb-4">
+                    <Link to="/">
+                        <button onClick={() => handleSubmit()} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" content='Enviar' icon='like'>Enviar</button>
+                    </Link>
+                </div>
+                <div className="flex items-center justify-between">
+                    <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    )
+}
+export default NewsForm

@@ -1,8 +1,8 @@
 import React from 'react'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "../Pages/HomePage/HomePage"
-import Login from '../Pages/Login';
-
+import AdminPage from '../Pages/AdminPage/AdminPage';
+import LoginPage from '../Pages/LoginPage/LoginPage';
 
 function Routes() {
 
@@ -12,7 +12,11 @@ function Routes() {
     },
     {
         path: "/login",
-        element: <Login />
+        element: <LoginPage />
+    },
+    {
+        path: "/admin",
+        element: <AdminPage />
     }
     ])
 

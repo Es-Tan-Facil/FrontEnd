@@ -1,9 +1,9 @@
 import axios from 'axios';
-import authHeader from '../service/Auth-Header';
+import AuthHeader from '../Services/AuthService';
 
-const HTTPService = () => {
+function HTTPService () {
 
-  const url = 'http://localhost:8080/model';
+  const url = 'http://localhost:8080/api/v1/news';
 
   const getAllData = async () => {
     const response = await axios.get(`${url}`);
@@ -11,27 +11,27 @@ const HTTPService = () => {
   };
 
   const getDataById = async (id) => {
-    const response = await axios.get(`${url}/${id}`, { headers: authHeader() });
+    const response = await axios.get(`${url}/${id}`, { headers: AuthHeader() });
     return response.data;
 
   };
 
   const createData = async (data) => {
-    console.log(authHeader());
+    console.log(AuthHeader());
     
-    const response = await axios.post(`${url}`, data, {headers:{"Content-Type" : "application/json",  "Authorization": 'Bearer ' + authHeader() }});
+    const response = await axios.post(`${url}`, data, {headers:{"Content-Type" : "application/json",  "Authorization": 'Bearer ' + AuthHeader() }});
     return response.data;
 
   };
 
   const updateData = async (id, data) => {
-    const response = await axios.put(`${url}/${id}`, data, { headers: authHeader() });
+    const response = await axios.put(`${url}/${id}`, data, { headers: AuthHeader() });
     return response.data;
 
   };
 
   const deleteData = async (id) => {
-    const response = await axios.delete(`${url}/${id}`, { headers: authHeader() });
+    const response = await axios.delete(`${url}/${id}`, { headers: AuthHeader() });
     return response.data;
 
   };
