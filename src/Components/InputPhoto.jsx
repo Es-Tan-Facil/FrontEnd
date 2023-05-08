@@ -3,7 +3,7 @@ import React, { useState, useEffect} from 'react';
 function InputPhoto({setUrlImg}) {
     const [file, setFile] = useState(null);
     const [imagePreview, setImagePreview] = useState(null);
-    const [base64, setBase64] = useState(null);
+    const [base64, setBase64] = useState('');
 
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -35,7 +35,7 @@ function InputPhoto({setUrlImg}) {
 
     return (
         <div>
-            <textarea onChange={(e)=> setUrlImg(e.target.value)} value={base64} required class="form-control" placeholder="Añade una foto"
+            <textarea onChange={(e)=> setUrlImg(e.target.value)} value={base64} required className="form-control" placeholder="Añade una foto"
                                 id="photo"/>
         <input type="file" onChange={handleFileChange} />
         </div>

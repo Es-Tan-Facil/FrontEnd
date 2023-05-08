@@ -17,9 +17,9 @@ function HTTPService () {
   };
 
   const createData = async (data) => {
-    console.log(AuthHeader());
+    console.log(data);
     
-    const response = await axios.post(`${url}`, data, {headers:{"Content-Type" : "application/json",  "Authorization": 'Bearer ' + AuthHeader() }});
+    const response = await axios.post(`${url}`, data, {headers:{"Content-Type" : "application/json",  "Authorization": AuthHeader() }});
     return response.data;
 
   };
@@ -31,7 +31,7 @@ function HTTPService () {
   };
 
   const deleteData = async (id) => {
-    const response = await axios.delete(`${url}/${id}`, { headers: AuthHeader() });
+    const response = await axios.delete(`${url}/${id}`, { headers: AuthHeader()});
     return response.data;
 
   };
