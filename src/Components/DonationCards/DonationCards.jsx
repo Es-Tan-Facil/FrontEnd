@@ -1,5 +1,5 @@
 import './DonationCards.css';
-import Bus from '../../Assets/Pictures/Bus.svg';
+import Bus from '../../Assets/Pictures/bus.svg';
 import SchoolBuilding from '../../Assets/Pictures/SchoolBuilding.svg';
 import SchoolMaterial from '../../Assets/Pictures/SchoolMaterial.svg';
 import Help from '../../Assets/Pictures/Help.svg';
