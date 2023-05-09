@@ -8,13 +8,16 @@ function InputPhoto({setUrlImg}) {
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
         setFile(selectedFile);
+        
 
         const reader = new FileReader();
         reader.onloadend = () => {
             setImagePreview(reader.result);
         };
         reader.readAsDataURL(selectedFile);
+       
     };
+    
 
     useEffect(() => {
         if (imagePreview) {
@@ -28,10 +31,14 @@ function InputPhoto({setUrlImg}) {
                 context.drawImage(image, 0, 0);
                 const base64 = canvas.toDataURL();
                 setBase64(base64);
-                setUrlImg(base64)
+                setUrlImg(base64);
+                
             };
+            
         }
     }, [imagePreview]);
+    
+    
 
     return (
         <div>

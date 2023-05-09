@@ -10,6 +10,7 @@ function NewsForm() {
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
 
+
     
 
     const handleSubmit = (event) => {
@@ -20,12 +21,14 @@ function NewsForm() {
             urlImg: urlImg
             
         }
+        
         event.target.reset();
 
         HTTPService().createData(data)
         .then(response => {
             setShowAlert(true);
             setAlertMessage('El post se ha creado exitosamente');
+            
         })
         .catch(error => {
             setShowAlert(true);
@@ -40,7 +43,7 @@ function NewsForm() {
 
         <div className="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <h2 className="text-xl mb-4 font-bold">Escribe Tu Post</h2>
-            {showAlert && <Alert color={alertMessage.includes('Error') ? 'red' : 'green'}>{alertMessage}</Alert>}
+            {showAlert && <Alert color={alertMessage.includes('Error') ? 'red' : 'blue'}>{alertMessage}</Alert>}
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                     <label className="block text-gray-700 font-bold mb-2" htmlFor="title">Título</label>

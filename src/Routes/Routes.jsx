@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "../Pages/HomePage/HomePage"
 import AdminPage from '../Pages/AdminPage/AdminPage';
 import LoginPage from '../Pages/LoginPage/LoginPage';
+import News from '../Pages/News/News';
 
 function Routes() {
 
@@ -17,6 +18,10 @@ function Routes() {
     {
         path: "/admin",
         element: <AdminPage />
+    },
+    {
+        path: "/news",
+        element: <News />
     }
     ])
 
