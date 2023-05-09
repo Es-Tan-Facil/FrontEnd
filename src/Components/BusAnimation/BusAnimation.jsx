@@ -11,10 +11,10 @@ const BusAnimation = () => {
     <>
     <div className='BusAnimation'>
     
-    <img src={background} alt="" className='BackgroundImg' />
-    <div>
-      <img src={bus} alt="" className='BusImg' style={{ transform: `translate(${posX}vw)` }} />
-    </div>
+      <img src={background} alt="" className='BackgroundImg' />
+      <div className="sub_div">
+        <img src={bus} alt="" className='BusImg' style={{ transform: `translate(${posX}vw)` }} />
+      </div>
     </div>
     </>
   )
