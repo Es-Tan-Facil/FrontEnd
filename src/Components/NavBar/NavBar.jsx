@@ -19,7 +19,7 @@ export default function NavBar() {
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
-        variant="h6"
+        variant="h5"
         color="black"
         className="p-1 font-normal"
       >
@@ -38,7 +38,7 @@ export default function NavBar() {
 
       <Typography
         as="li"
-        variant="h6"
+        variant="h5"
         color="black"
         className="p-1 font-normal"
       >
@@ -58,7 +58,7 @@ export default function NavBar() {
 
       <Typography
         as="li"
-        variant="h6"
+        variant="h5"
         color="black"
         className="p-1 font-normal"
       >
@@ -78,7 +78,7 @@ export default function NavBar() {
 
       <Typography
         as="li"
-        variant="h6"
+        variant="h5"
         color="black"
         className="p-1 font-normal"
       >
@@ -98,7 +98,7 @@ export default function NavBar() {
 
       <Typography
         as="li"
-        variant="h6"
+        variant="h5"
         color="black"
         className="p-1 font-normal"
       >
@@ -117,7 +117,7 @@ export default function NavBar() {
       </Typography>
 
       <a href="#"><img 
-      className="mr-4 h-6 cursor-pointer "
+      className="mt-1 mr-4 h-10 cursor-pointer "
       src={LogIn}
       alt="LogInICON"
         /></a>
