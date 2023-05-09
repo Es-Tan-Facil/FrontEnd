@@ -1,5 +1,5 @@
 import React from 'react'
-import Stain from '../../Assets/Pictures/Mancha_Titurlo.svg'
+import Stain from '../../Assets/Pictures/Mancha.svg'
 
 export default function Title({ title }) {
     return (
