@@ -1,3 +1,5 @@
-*{
-    
+.news{
+    display: flex;
+    align-items: row;
+    justify-content: center;
 }

@@ -15,7 +15,12 @@ export default function HomePage() {
       <Header/>
       <DonationCards />
       <WhoAreWe />
+      <div className='news'>
       <NewsCards />
+      <NewsCards />
+      <NewsCards />
+      </div>
+    
       <OurTrip />
     <BusAnimation />
 </>
