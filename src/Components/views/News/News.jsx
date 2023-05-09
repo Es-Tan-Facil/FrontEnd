@@ -9,7 +9,7 @@ function News() {
         img: `${carretera}`
     }]
   return (
-    <div id='UltimaNoticias'>
+    <div title="UltimasNoticias" id='UltimasNoticias'>
     {data.map((item) => 
 
     <NewsCards item={item}/>

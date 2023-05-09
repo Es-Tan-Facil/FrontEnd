@@ -2,6 +2,7 @@ import React from "react";
 import {Navbar, MobileNav, Typography, IconButton} from "@material-tailwind/react";
 import Logo from '../../Assets/Pictures/Logo.svg'
 import LogIn from '../../Assets/Pictures/LogInICON.svg'
+import { Link, animateScroll as scroll } from "react-scroll";
 
  
 export default function NavBar() {
@@ -22,50 +23,99 @@ export default function NavBar() {
         color="black"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link 
+        className="flex items-center cursor-pointer" 
+        activeClass="active" 
+        to="" 
+        spy={true} 
+        smooth={true} 
+        offset={0} 
+        duration={500} 
+        >
           Inicio
-        </a>
+        </Link>
       </Typography>
+
       <Typography
         as="li"
         variant="h6"
         color="black"
         className="p-1 font-normal"
       >
-        <a href="#Colabora" className="flex items-center">
+          <Link 
+        className="flex items-center cursor-pointer" 
+        activeClass="active" 
+        to="Colabora" 
+        spy={true} 
+        smooth={true} 
+        offset={0} 
+        duration={500} 
+        >
           Colabora
-        </a>
+        </Link>
+        
       </Typography>
+
       <Typography
         as="li"
         variant="h6"
         color="black"
         className="p-1 font-normal"
       >
-        <a href="#QuienesSomos" className="flex items-center">
+        <Link 
+        className="flex items-center cursor-pointer" 
+        activeClass="active" 
+        to="QuienesSomos" 
+        spy={true} 
+        smooth={true} 
+        offset={0} 
+        duration={500} 
+        >
           Quiénes somos
-        </a>
+        </Link>
+        
       </Typography>
+
       <Typography
         as="li"
         variant="h6"
         color="black"
         className="p-1 font-normal"
       >
-        <a href="#UltimaNoticias" className="flex items-center">
+        <Link 
+        className="flex items-center cursor-pointer" 
+        activeClass="active" 
+        to="UltimasNoticias" 
+        spy={true} 
+        smooth={true} 
+        offset={0} 
+        duration={500} 
+        >
           Últimas noticias
-        </a>
+        </Link>
+        
       </Typography>
+
       <Typography
         as="li"
         variant="h6"
         color="black"
         className="p-1 font-normal"
       >
-        <a href="#NuestroViaje" className="flex items-center">
+        <Link 
+        className="flex items-center cursor-pointer" 
+        activeClass="active" 
+        to="NuestroViaje" 
+        spy={true} 
+        smooth={true} 
+        offset={0} 
+        duration={500} 
+        >
           Nuestro viaje
-        </a>
+        </Link>
+        
       </Typography>
+
       <a href="#"><img 
       className="mr-4 h-6 cursor-pointer "
       src={LogIn}
