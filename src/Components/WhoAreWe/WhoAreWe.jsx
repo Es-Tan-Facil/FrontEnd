@@ -8,7 +8,7 @@ import somos from "../../Assets/Pictures/01.svg"
 
 export default function WhoAreWe() {
     return (
-        <div style={{display: "flex", justifyContent:"center"}}>
+        <div id='QuienesSomos' style={{display: "flex", justifyContent:"center"}}>
             <div style={{ width:"550px"}}>
            
                 <img src={somos} alt="imagen" />
