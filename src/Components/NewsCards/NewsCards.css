@@ -1,0 +1,12 @@
+#CardBorder{
+ border-color: #98DCF9 ;
+ width: 20vw;
+ margin-left: 3vw;
+ margin-top: 3vh;
+}
+
+@media (max-width:420px){
+#CardBorder{
+    width: 40vw;
+}
+}
