@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import HTTPService from '../../Services/HTTPService'
 import InputPhoto from '../../InputPhoto/InputPhoto'
-
+import { Alert } from "@material-tailwind/react";
 
 function NewsForm() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [urlImg, setUrlImg] = useState('');
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertMessage, setAlertMessage] = useState('');
+
+    
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -19,6 +23,16 @@ function NewsForm() {
         event.target.reset();
 
         HTTPService().createData(data)
+        .then(response => {
+            setShowAlert(true);
+            setAlertMessage('El post se ha creado exitosamente');
+        })
+        .catch(error => {
+            setShowAlert(true);
+            setAlertMessage('Error al crear el post');
+        });
+        
+        
         
     }
 
@@ -26,6 +40,7 @@ function NewsForm() {
 
         <div className="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <h2 className="text-xl mb-4 font-bold">Escribe Tu Post</h2>
+            {showAlert && <Alert color={alertMessage.includes('Error') ? 'red' : 'green'}>{alertMessage}</Alert>}
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                     <label className="block text-gray-700 font-bold mb-2" htmlFor="title">Título</label>
@@ -46,6 +61,7 @@ function NewsForm() {
                     <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Cancelar</button>
                 </div>
             </form>
+           
         </div>
     )
 }
