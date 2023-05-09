@@ -1,5 +1,5 @@
 .BusAnimation{
-  width: 100vw;
+  width: 100%;
 }
 
 .BusImg {
@@ -8,6 +8,7 @@
   left: 0;
   z-index: 1;
   width: 15vw;
+  transform: translateX(var(--posX, 0)); 
 }
 
 .BackgroundImg {
@@ -16,13 +17,11 @@
 }
 
 .sub_div {
-  position: relative;
-  bottom: 5px;
-  height: 100%;
-  width: 100%;
+    position: relative;
+    bottom: 5px;
 }
 /* 
-@media (max-width: 1280px) {
+@media (max-width: 500px) {
   .BusImg {
     height: 13vh;
     margin-bottom: 12vh;
