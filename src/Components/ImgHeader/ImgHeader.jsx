@@ -19,11 +19,11 @@ function ImgHeader() {
       img
       ?
       <img src={ImgHeaderA} 
-          onMouseEnter={hoverHandler}
+          onMouseEnter={hoverHandler} alt=''
           />
       :
       <img src={ImgHeaderB} 
-      onMouseLeave={outHandler}/>
+      onMouseLeave={outHandler} alt=''/>
       }
       
         
