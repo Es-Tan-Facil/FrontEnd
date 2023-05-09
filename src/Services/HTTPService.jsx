@@ -1,5 +1,5 @@
 import axios from 'axios';
-import AuthHeader from '../Services/AuthService';
+import AuthHeader from '../Services/AuthHeader';
 
 function HTTPService () {
 
@@ -15,11 +15,13 @@ function HTTPService () {
     return response.data;
 
   };
+  
 
   const createData = async (data) => {
     console.log(data);
     
     const response = await axios.post(`${url}`,data, {headers:{"Content-Type" : "application/json",  "Authorization":  AuthHeader() }});
+  
     return response.data;
 
   };
