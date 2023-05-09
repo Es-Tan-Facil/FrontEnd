@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import HTTPService from '../../Services/HTTPService'
-import InputPhoto from '../InputPhoto'
+import InputPhoto from '../../InputPhoto/InputPhoto'
 
 
 function NewsForm() {
@@ -19,7 +19,6 @@ function NewsForm() {
 console.info(data);
         HTTPService().createData(data)
     }
-
     return (
 
         <div className="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
