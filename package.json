@@ -3,14 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/open-sans": "^4.5.14",
+    "@headlessui/react": "^1.7.14",
+    "@heroicons/react": "^2.0.17",
+    "@material-tailwind/react": "^2.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "heroicons": "^2.0.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1",
+<<<<<<< HEAD
     "react-scripts": "5.0.1",
+=======
+    "react-scripts": "^5.0.1",
+    "react-scroll": "^1.8.9",
+>>>>>>> 0bdae934ab40a1ed3651615d5fe1e27877a3a870
     "web-vitals": "^2.1.4"
   },
   "scripts": {
