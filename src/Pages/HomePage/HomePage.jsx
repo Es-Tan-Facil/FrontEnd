@@ -6,6 +6,9 @@ import OurTrip from '../../Components/OurTrip/OurTrip'
 import Header from '../../Components/Header/Header'
 import BusAnimation from '../../Components/BusAnimation/BusAnimation'
 import background from '../../Assets/Pictures/mapa_back.svg'
+import News from '../../Components/News/News'
+
+
 
 
 export default function HomePage() {

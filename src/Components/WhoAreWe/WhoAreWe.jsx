@@ -9,11 +9,11 @@ import './WhoAreWe.css'
 
 export default function WhoAreWe() {
     return (
-        <div id= "containerWho" class="flex justify-center items-center flex-row flex-wrap gap-14 py-4">
+        <div id= "WhoAreWe" className="flex justify-center items-center flex-row flex-wrap gap-14 py-4">
             <div id= "imageWho" >
                 <img src={somos} alt="imagen" />
             </div>
-            <div id="textWho" class="text-justify" >
+            <div id="textWho" className="text-justify" >
                 <Subtitle subtitle="Es Tan Fácil" />
                 <Title title="Quiénes somos" />
                 <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took 

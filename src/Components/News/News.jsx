@@ -1,6 +1,6 @@
 import React from 'react'
-import NewsCards from '../../NewsCards/NewsCards.jsx'
-import carretera from '../../../Assets/Pictures/carretera.jpg';
+import NewsCards from '../NewsCards/NewsCards.jsx'
+import carretera from '../../Assets/Pictures/carretera.jpg';
 
 function News() {
     let data = [{
