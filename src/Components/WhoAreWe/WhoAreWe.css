@@ -3,13 +3,12 @@
    width: 100vw;
 }
 
-.imageWho {
+#imageWho {
    width: 40%;
 }
 
-.textWho {
+#textWho {
    width: 40%;
-   text-align: justify;
    text-justify: inter-word;
    margin: 0 10px;
 
@@ -17,8 +16,8 @@
 
 @media screen and (max-width: 768px) {
 
-   .imageWho,
-   .textWho {
+  #imageWho,
+  #textWho {
       width: 100%;
       margin-bottom: 5%;
       margin: 0 10px;

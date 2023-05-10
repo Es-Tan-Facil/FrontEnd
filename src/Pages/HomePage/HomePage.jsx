@@ -6,18 +6,23 @@ import Header from '../../Components/Header/Header'
 import NewsCards from '../../Components/NewsCards/NewsCards'
 import './HomePage.css'
 import BusAnimation from '../../Components/BusAnimation/BusAnimation'
+import background from '../../Assets/Pictures/mapa_back.svg'
 
 
 export default function HomePage() {
   return (
     
     <>
+    <div className="containerHome"> 
+    <img src={background} alt="imagen" />
+    </div>
       <Header/>
       <DonationCards />
       <WhoAreWe />
       <NewsCards />
       <OurTrip />
     <BusAnimation />
+   
 </>
   )
 
