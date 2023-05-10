@@ -13,7 +13,6 @@ function News() {
     {data.map((item) => 
 
       <NewsCards item={item}/>
-     
     
       )}
     </div>
