@@ -10,7 +10,7 @@ import SchoolMaterial from '../../Assets/Pictures/SchoolMaterial.svg';
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 
 
-export default function CardSchoolMaterial({ text }) {
+export default function CardSchoolMaterial() {
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => setOpen(!open);
@@ -23,7 +23,7 @@ export default function CardSchoolMaterial({ text }) {
                     Material escolar
                 </Typography>
             </CardBody>
-            <img id="HelpUsImg" src={SchoolMaterial} alt="School Material" />
+            <img className="CardImg" id="HelpUsImg" src={SchoolMaterial} alt="School Material" />
             <Fragment>
                 <Dialog
                     open={open}
