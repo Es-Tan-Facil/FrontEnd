@@ -100,7 +100,7 @@ export default function NavBar() {
         <Link 
         className="flex items-center cursor-pointer" 
         activeClass="active" 
-        to="NuestroViaje" 
+        to="OurTrip" 
         spy={true} 
         smooth={true} 
         offset={0} 

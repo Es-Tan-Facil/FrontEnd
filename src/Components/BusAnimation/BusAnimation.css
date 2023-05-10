@@ -1,5 +1,5 @@
 .BusAnimation{
-  width: 100vw;
+  width: 100%;
 }
 
 .BusImg {
@@ -17,7 +17,6 @@
 
 .sub_div {
   position: relative;
-  bottom: 5px;
   height: 100%;
   width: 100%;
 }
