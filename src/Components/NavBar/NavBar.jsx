@@ -2,7 +2,7 @@ import React from "react";
 import {Navbar, MobileNav, Typography, IconButton} from "@material-tailwind/react";
 import Logo from '../../Assets/Pictures/Logo.svg'
 import LogIn from '../../Assets/Pictures/LogInICON.svg'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
  
 export default function NavBar() {
@@ -116,7 +116,7 @@ export default function NavBar() {
         
       </Typography>
 
-      <a href="#"><img 
+      <a href=""><img 
       className="mt-1 mr-4 h-10 cursor-pointer "
       src={LogIn}
       alt="LogInICON"
@@ -128,7 +128,7 @@ export default function NavBar() {
     <>
       <Navbar className="relative shadow-none inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
         <div className="flex items-start justify-between text-blue-gray-900">
-          <a href="#"><img 
+          <a href=""><img 
       className="mr-4 h-28 cursor-pointer "
       src={Logo}
       alt="Logo"

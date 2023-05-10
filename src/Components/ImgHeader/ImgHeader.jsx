@@ -13,17 +13,16 @@ function ImgHeader() {
   }
   return (
     
-    <div className="outer-box">
+    <div className="outer-box md:h-4/5 ">
         
       {
       img
       ?
       <img src={ImgHeaderA} 
-          onMouseEnter={hoverHandler}
-          />
+          onMouseEnter={hoverHandler} alt=''/>
       :
       <img src={ImgHeaderB} 
-      onMouseLeave={outHandler}/>
+      onMouseLeave={outHandler} alt=''/>
       }
       
         
