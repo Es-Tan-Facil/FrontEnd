@@ -2,7 +2,7 @@ CardBody {
     height: 7.5vh;
 }
 
-Card img {
+.CardImg {
     margin-right: auto;
     margin-left: auto;
     margin-top: auto;
