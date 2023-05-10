@@ -2,10 +2,6 @@ CardBody {
     height: 7.5vh;
 }
 
-#card-container {
-    height: 100vh;
-}
-
 img {
     margin-right: auto;
     margin-left: auto;
