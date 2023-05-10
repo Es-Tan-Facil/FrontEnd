@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import HTTPService from '../../Services/HTTPService'
 import InputPhoto from '../../InputPhoto/InputPhoto'
 import { Alert } from "@material-tailwind/react";
+import { WithRouter } from '../../Common/WithRouter';
 
-function NewsForm() {
+
+function NewsForm(props) {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [urlImg, setUrlImg] = useState('');
@@ -28,7 +30,7 @@ function NewsForm() {
         .then(response => {
             setShowAlert(true);
             setAlertMessage('El post se ha creado exitosamente');
-            
+            props.router.navigate("/news");
         })
         .catch(error => {
             setShowAlert(true);
@@ -68,4 +70,4 @@ function NewsForm() {
         </div>
     )
 }
-export default NewsForm
+export default WithRouter(NewsForm);
