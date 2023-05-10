@@ -11,7 +11,7 @@ import Title from '../Title/Title';
 export default function DonationCards() {
     return (
         <>
-            <div id="Colabora" style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}}>
+            <div title="Colabora" id="Colabora" style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}}>
                 <Subtitle subtitle="Nuestra causa" />
                 <Title title="Colabora con nosotros" />
             </div>

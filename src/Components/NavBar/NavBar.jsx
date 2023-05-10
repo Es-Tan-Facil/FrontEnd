@@ -1,10 +1,9 @@
 import React from "react";
-import {
-  Navbar,
-  MobileNav,
-  Typography,
-  IconButton,
-} from "@material-tailwind/react";
+import {Navbar, MobileNav, Typography, IconButton} from "@material-tailwind/react";
+import Logo from '../../Assets/Pictures/Logo.svg'
+import LogIn from '../../Assets/Pictures/LogInICON.svg'
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
  
 export default function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -16,74 +15,130 @@ export default function NavBar() {
     );
   }, []);
  
+
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
+        variant="h5"
+        color="black"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link 
+        className="flex items-center cursor-pointer" 
+        activeClass="active" 
+        to="" 
+        spy={true} 
+        smooth={true} 
+        offset={0} 
+        duration={500} 
+        >
           Inicio
-        </a>
+        </Link>
       </Typography>
+
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
+        variant="h5"
+        color="black"
         className="p-1 font-normal"
       >
-        <a href="#Colabora" className="flex items-center">
+          <Link 
+        className="flex items-center cursor-pointer" 
+        activeClass="active" 
+        to="Colabora" 
+        spy={true} 
+        smooth={true} 
+        offset={0} 
+        duration={500} 
+        >
           Colabora
-        </a>
+        </Link>
+        
       </Typography>
+
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
+        variant="h5"
+        color="black"
         className="p-1 font-normal"
       >
-        <a href="#Quienes somos" className="flex items-center">
+        <Link 
+        className="flex items-center cursor-pointer" 
+        activeClass="active" 
+        to="QuienesSomos" 
+        spy={true} 
+        smooth={true} 
+        offset={0} 
+        duration={500} 
+        >
           Quiénes somos
-        </a>
+        </Link>
+        
       </Typography>
+
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
+        variant="h5"
+        color="black"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link 
+        className="flex items-center cursor-pointer" 
+        activeClass="active" 
+        to="UltimasNoticias" 
+        spy={true} 
+        smooth={true} 
+        offset={0} 
+        duration={500} 
+        >
           Últimas noticias
-        </a>
+        </Link>
+        
       </Typography>
+
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
+        variant="h5"
+        color="black"
         className="p-1 font-normal"
       >
-        <a href="#Nuestro viaje" className="flex items-center">
+        <Link 
+        className="flex items-center cursor-pointer" 
+        activeClass="active" 
+        to="NuestroViaje" 
+        spy={true} 
+        smooth={true} 
+        offset={0} 
+        duration={500} 
+        >
           Nuestro viaje
-        </a>
+        </Link>
+        
       </Typography>
+
+      <NavLink to={"/login"} href=""><img 
+      className="mt-1 mr-4 h-10 cursor-pointer "
+      src={LogIn}
+      alt="LogInICON"
+        /></NavLink>
     </ul>
   );
  
   return (
     <>
-      <Navbar className="sticky shadow-none inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
-        <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="#"
-            className="mr-4 cursor-pointer py-1.5 font-medium"
-          >
-            Material Tailwind
-          </Typography>
+      <Navbar className="relative shadow-none inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
+        <div className="flex items-start justify-between text-blue-gray-900">
+          <a href=""><img 
+      className="mr-4 h-28 cursor-pointer "
+      src={Logo}
+      alt="Logo"
+      
+        /></a>
+          
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
+            
             
             <IconButton
               variant="text"
@@ -122,6 +177,8 @@ export default function NavBar() {
                 </svg>
               )}
             </IconButton>
+
+            
           </div>
         </div>
         <MobileNav open={openNav}>
