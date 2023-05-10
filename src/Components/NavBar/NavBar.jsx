@@ -3,7 +3,7 @@ import {Navbar, MobileNav, Typography, IconButton} from "@material-tailwind/reac
 import Logo from '../../Assets/Pictures/Logo.svg'
 import LogIn from '../../Assets/Pictures/LogInICON.svg'
 import { Link } from "react-scroll";
-
+import { NavLink } from "react-router-dom";
  
 export default function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -15,6 +15,7 @@ export default function NavBar() {
     );
   }, []);
  
+
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
@@ -116,11 +117,11 @@ export default function NavBar() {
         
       </Typography>
 
-      <a href=""><img 
+      <NavLink to={"/login"} href=""><img 
       className="mt-1 mr-4 h-10 cursor-pointer "
       src={LogIn}
       alt="LogInICON"
-        /></a>
+        /></NavLink>
     </ul>
   );
  

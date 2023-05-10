@@ -19,12 +19,7 @@ function ImgHeader() {
       img
       ?
       <img src={ImgHeaderA} 
-<<<<<<< .merge_file_13yq72
           onMouseEnter={hoverHandler} alt=''/>
-=======
-          onMouseEnter={hoverHandler} alt=''
-          />
->>>>>>> .merge_file_6GZf8u
       :
       <img src={ImgHeaderB} 
       onMouseLeave={outHandler} alt=''/>
