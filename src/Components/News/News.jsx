@@ -12,7 +12,7 @@ function News() {
     <div title="UltimasNoticias" id='UltimasNoticias'>
     {data.map((item) => 
 
-    <NewsCards item={item}/>
+      <NewsCards item={item}/>
      
     
       )}
