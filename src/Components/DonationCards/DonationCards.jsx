@@ -11,7 +11,7 @@ export default function DonationCards() {
 
     return (
         <div className="h-[58.188rem]">
-            <div id="Colabora" class="flex justify-center items-center flex-col" >
+            <div id="Collaborate" class="flex justify-center items-center flex-col" >
                 <Subtitle subtitle="Nuestra causa" />
                 <Title title="Colabora con nosotros" />
             </div>
