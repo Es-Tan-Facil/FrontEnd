@@ -10,7 +10,7 @@ import SchoolBuilding from '../../Assets/Pictures/SchoolBuilding.svg';
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 
 
-export default function CardSchool({ text }) {
+export default function CardSchool() {
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => setOpen(!open);
@@ -23,7 +23,7 @@ export default function CardSchool({ text }) {
                     Apadrina una escuela
                 </Typography>
             </CardBody>
-            <img id="HelpUsImg" src={SchoolBuilding} alt="School Building" />
+            <img className="CardImg" id="HelpUsImg" src={SchoolBuilding} alt="School Building" />
             <Fragment>
                 <Dialog
                     open={open}

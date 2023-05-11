@@ -22,7 +22,7 @@ export default function CardMoreHelp() {
                     Más ayuda
                 </Typography>
             </CardBody>
-            <img id="HelpUsImg" src={Help} alt="Help Us" />
+            <img className="CardImg" id="HelpUsImg" src={Help} alt="Help Us" />
             <Fragment>
                 <Dialog
                     open={open}

@@ -9,7 +9,7 @@ import './WhoAreWe.css'
 
 export default function WhoAreWe() {
     return (
-        <div id= "WhoAreWe" className="flex justify-center items-center flex-row flex-wrap gap-14 py-4">
+        <div id= "WhoAreWe" className="md:h-[100vh] flex justify-center items-center flex-row flex-wrap gap-14 py-4">
             <div id= "imageWho" >
                 <img src={somos} alt="imagen" />
             </div>
