@@ -26,7 +26,7 @@ function NewsSection() {
 
     <div  id="LastNews" className="flex justify-center items-center flex-col">
       <Title  title="Últimas Noticias" />
-      <div className="flex justify-center">
+      <div className="flex justify-center flex-wrap mt-1.5 gap-14">
         {cards.slice(-3).map((card) => (
           <NewsCards key={card.id} card={card} />
         ))}
