@@ -24,7 +24,7 @@ export default function HomePage() {
       <NewsSection />
       <OurTrip />
     <BusAnimation />
-   
+
 </>
   )
 
