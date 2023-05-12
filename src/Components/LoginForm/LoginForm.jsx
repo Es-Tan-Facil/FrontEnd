@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthService from '../../Services/AuthService';
+import AuthService from '../../Services/Services/AuthService';
 import { useState } from 'react';
 import { WithRouter } from '../../Common/WithRouter';
 import './LoginForm.css';

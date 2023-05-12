@@ -1,5 +1,5 @@
 import axios from 'axios';
-import AuthHeader from '../Services/AuthHeader';
+import AuthHeader from './AuthHeader';
 
 function HTTPService () {
 

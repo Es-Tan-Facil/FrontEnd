@@ -4,7 +4,7 @@ import Logo from '../../Assets/Pictures/Logo.svg'
 import LogIn from '../../Assets/Pictures/LogInICON.svg'
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
-import AuthService from "../../Services/AuthService";
+import AuthService from "../../Services/Services/AuthService";
 
 export default function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
