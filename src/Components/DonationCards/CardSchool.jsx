@@ -23,7 +23,7 @@ export default function CardSchool() {
                     Apadrina una escuela
                 </Typography>
             </CardBody>
-            <img className="CardImg" id="HelpUsImg" src={SchoolBuilding} alt="School Building" />
+            <img className="CardImg" id="SchoolImg" src={SchoolBuilding} alt="School Building" />
             <Fragment>
                 <Dialog
                     open={open}

@@ -192,9 +192,9 @@ export default function NavBar() {
 
           </div>
         </div>
-        <Collapse open={openNav}>
+        <MobileNav open={openNav}>
           {navList}
-        </Collapse>
+        </MobileNav>
       </Navbar>
 
     </>

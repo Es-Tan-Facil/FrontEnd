@@ -23,7 +23,7 @@ export default function CardSchoolMaterial() {
                     Material escolar
                 </Typography>
             </CardBody>
-            <img className="CardImg" id="HelpUsImg" src={SchoolMaterial} alt="School Material" />
+            <img className="CardImg" id="SchoolMaterialImg" src={SchoolMaterial} alt="School Material" />
             <Fragment>
                 <Dialog
                     open={open}
