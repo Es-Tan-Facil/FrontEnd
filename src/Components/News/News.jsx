@@ -30,9 +30,19 @@ function News() {
 
   const startIndex = (currentPage - 1) * perPage;
 
+  const handlePreviousPage = () => {
+    setCurrentPage(currentPage - 1);
+    window.scrollTo(0, 900); 
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage(currentPage + 1);
+    window.scrollTo(0, 900);
+  };
+
   return (
     <div className="flex flex-col items-center mt-12">
-      <Title title="Últimas Noticias" />
+      <Title id="News" title="Últimas Noticias" />
       <div className="w-4/5 mx-auto md:w-2/5 mx-auto">
         {cards.slice(startIndex, startIndex + perPage).map((item) => (
           <div key={item.id} className="mb-4 mt-10">
@@ -42,16 +52,16 @@ function News() {
       </div>
       <div className="flex justify-center mb-10 md:mt-4">
         <button
-          onClick={() => setCurrentPage(currentPage - 1)}
+          onClick={handlePreviousPage}
           disabled={currentPage === 1}
-          className="px-2 py-1 rounded-md bg-blue-500 text-white mr-2"
+          className="px-2 py-1 rounded-md bg-[#51C8FC] text-white mr-2"
         >
           Anterior
         </button>
         <button
-          onClick={() => setCurrentPage(currentPage + 1)}
+          onClick={handleNextPage}
           disabled={startIndex + perPage >= cards.length}
-          className="px-2 py-1 rounded-md bg-blue-500 text-white"
+          className="px-2 py-1 rounded-md bg-[#51C8FC] text-white"
         >
           Siguiente
         </button>
@@ -61,5 +71,6 @@ function News() {
 }
 
 export default News;
+
 
 

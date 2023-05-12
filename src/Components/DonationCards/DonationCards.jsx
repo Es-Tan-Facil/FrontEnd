@@ -5,6 +5,7 @@ import CardMoreHelp from './CardMoreHelp';
 import CardSchoolMaterial from './CardSchoolMaterial';
 import CardSchool from './CardSchool';
 import CardKM from './CardKM';
+import { Button } from "@material-tailwind/react";
 
 
 export default function DonationCards() {
@@ -21,6 +22,7 @@ export default function DonationCards() {
                 <CardSchoolMaterial />
                 <CardMoreHelp />
             </div>
+            <Button size="lg" className='bg-[#51C8FC] mt-12 md:px-20'>Contacta</Button>
         </div>
     )
 }
