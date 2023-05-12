@@ -7,7 +7,7 @@ import { compareDesc } from 'date-fns';
 function News() {
   const [cards, setCards] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const perPage = 2;
+  const perPage = 3;
 
   useEffect(() => {
     async function fetchNews() {
@@ -40,7 +40,7 @@ function News() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mb-10 md:mt-4">
         <button
           onClick={() => setCurrentPage(currentPage - 1)}
           disabled={currentPage === 1}
