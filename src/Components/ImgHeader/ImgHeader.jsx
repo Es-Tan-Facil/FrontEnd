@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import ImgHeaderA from '../../Assets/Pictures/Cabecera1.svg'
-import ImgHeaderB from '../../Assets/Pictures/Cabecera2.svg'
+import ImgHeaderA from '../../Assets/Pictures/Cabecera1.png'
+import ImgHeaderB from '../../Assets/Pictures/Cabecera2.png'
 import './ImgHeader.css';
 
 function ImgHeader() {

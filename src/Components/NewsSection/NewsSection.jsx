@@ -11,7 +11,6 @@ function NewsSection() {
     async function fetchNews() {
       try {
         const response = await HTTPService().getAllData();
-        console.info(response);
         setCards(response);
       } catch (error) {
         console.log(error);
@@ -24,7 +23,7 @@ function NewsSection() {
   return (
 
 
-    <div  id="LastNews" className="flex justify-center items-center flex-col">
+    <div  id="LastNews" className="md:h-[100vh] flex justify-center items-center flex-col">
       <Title  title="Últimas Noticias" />
       <div className="flex justify-center flex-wrap gap-12">
         {cards.slice(-3).map((card) => (

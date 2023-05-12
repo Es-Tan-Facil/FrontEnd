@@ -1,25 +1,23 @@
 .BusAnimation{
-  width: 100%;
-}
-
-.BusImg {
-  position: absolute;
-  bottom: 50%;
-  left: 0;
-  z-index: 1;
-  width: 15vw;
+  position: relative;
 }
 
 .BackgroundImg {
+  position: absolute;
   z-index: 0;
   width: 100%;
+  bottom: 0;
 }
 
 .sub_div {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  font-family:;
+  position: absolute;
+  width: 15vw;
+  top: 85%
+}
+
+.BusImg {
+  z-index: 1;
+  width: 15vw;
 }
 /* 
 @media (max-width: 1280px) {

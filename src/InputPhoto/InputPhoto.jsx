@@ -5,6 +5,8 @@ function InputPhoto({setUrlImg}) {
     const [imagePreview, setImagePreview] = useState(null);
     const [base64, setBase64] = useState('');
 
+    
+
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
         setFile(selectedFile);
@@ -36,7 +38,7 @@ function InputPhoto({setUrlImg}) {
             };
             
         }
-    }, [imagePreview]);
+    }, [imagePreview,setUrlImg,setBase64]);
     
     
 
