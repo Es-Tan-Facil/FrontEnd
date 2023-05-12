@@ -1,7 +1,3 @@
-.BusAnimation{
-  width: 100%;
-}
-
 .BusImg {
   position: absolute;
   bottom: 50%;
@@ -10,45 +6,8 @@
   width: 15vw;
 }
 
-.BackgroundImg {
-  z-index: 0;
-  width: 100%;
-}
-
 .sub_div {
   position: relative;
   height: 100%;
   width: 100%;
 }
-/* 
-@media (max-width: 1280px) {
-  .BusImg {
-    height: 13vh;
-    margin-bottom: 12vh;
-  }
-}
-@media (max-width: 420px) {
-  .BusImg {
-    height: 10vh;
-    width: 28vw;
-    margin-bottom: 32vh;
-  }
-}
-
-@media (max-width: 320px) {
-  .BusImg {
-    height: 10vh;
-    width: 28vw;
-    margin-bottom: 2vh;
-  }
-}
-
-@media (max-width: 360px) {
-    .BusImg {
-      height: 10vh;
-      width: 28vw;
-      margin-bottom: 30vh;
-    }
-  }
-  
-   */
