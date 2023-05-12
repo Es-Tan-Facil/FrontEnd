@@ -5,7 +5,7 @@ import NavBar from '../NavBar/NavBar'
 
 function Header() {
   return (
-    <div className='md:h-[100vh]'>
+    <div className='header md:h-[100vh]'>
         <NavBar/>
         <ImgHeader/>
     </div>
