@@ -1,0 +1,25 @@
+#OurTrip {
+    height: 100vh;
+    width: 100%;
+ }
+ 
+#imageTrip {
+    width: 40%;
+ }
+ 
+#textTrip {
+    width: 40%;
+    text-justify: inter-word;
+    margin: 0 10px;
+ 
+ }
+ 
+ @media screen and (max-width: 768px) {
+ 
+  #imageTrip,
+   #textTrip {
+       width: 100%;
+       margin-bottom: 5%;
+       margin: 0 10px;
+    }
+ }

@@ -2,18 +2,18 @@ import React from 'react'
 import Title from '../Title/Title'
 import Subtitle from '../Subtitle/Subtitle'
 import Text from '../Text/Text'
-import somos from "../../Assets/Pictures/01.svg"
+import somos from "../../Assets/Pictures/burbuja.svg"
+import './WhoAreWe.css'
 
 
 
 export default function WhoAreWe() {
     return (
-        <div title="QuienesSomos" id='QuienesSomos' style={{display: "flex", justifyContent:"center"}}>
-            <div style={{ width:"550px"}}>
-           
+        <div id= "WhoAreWe" className="md:h-[100vh] flex justify-center items-center flex-row flex-wrap gap-14 py-4">
+            <div id= "imageWho" >
                 <img src={somos} alt="imagen" />
             </div>
-            <div style={{ width: "31rem" }}>
+            <div id="textWho" className="text-justify" >
                 <Subtitle subtitle="Es Tan Fácil" />
                 <Title title="Quiénes somos" />
                 <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took 

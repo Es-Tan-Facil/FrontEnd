@@ -1,6 +1,6 @@
 import React from 'react'
-import NewsCards from '../../NewsCards/NewsCards.jsx'
-import carretera from '../../../Assets/Pictures/carretera.jpg';
+import NewsCards from '../NewsCards/NewsCards.jsx'
+import carretera from '../../Assets/Pictures/carretera.jpg';
 
 function News() {
     let data = [{
@@ -12,8 +12,7 @@ function News() {
     <div title="UltimasNoticias" id='UltimasNoticias'>
     {data.map((item) => 
 
-    <NewsCards item={item}/>
-     
+      <NewsCards item={item}/>
     
       )}
     </div>
