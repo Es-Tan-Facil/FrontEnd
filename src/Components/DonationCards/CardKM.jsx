@@ -26,7 +26,7 @@ export default function CardKM() {
                     Compra KM
                 </Typography>
             </CardBody>
-            <img className="CardImg" id="HelpUsImg" src={Bus} alt="Bus" />
+            <img className="CardImg" id="BusImg" src={Bus} alt="Bus" />
             <Fragment>
                 <Dialog
                     open={open}

@@ -8,7 +8,7 @@ const BusAnimation = () => {
     const[posX, setPosX] = useState(0);
     
   return (
-    <>
+    
     <div className='BusAnimation h-44 md:h-[100vh]'>
       <div className=' h-full'>
           <img src={background} alt="" className='BackgroundImg ' /> 
@@ -18,7 +18,7 @@ const BusAnimation = () => {
         <img src={bus} alt="" className='BusImg' style={{ transform: `translate(${posX}vw)` }} />
       </div>
     </div>
-    </>
+
   )
 }
 

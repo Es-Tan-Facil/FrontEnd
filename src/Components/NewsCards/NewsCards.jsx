@@ -19,5 +19,7 @@ const year = new Date(card.date).getFullYear();
         {card.description.substring(0, 130)}...
       </p>
     </div>
+
+
   );
 }
