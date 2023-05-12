@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import HTTPService from '../../Services/HTTPService.jsx';
 import Title from '../Title/Title.jsx';
 import NewPrototype from '../NewPrototype/NewProtype.jsx';
+import { compareDesc } from 'date-fns';
 
 function News() {
   const [cards, setCards] = useState([]);
@@ -13,7 +14,12 @@ function News() {
       try {
         const response = await HTTPService().getAllData();
         console.info(response);
-        setCards(response);
+
+        const sortedCards = response.sort((a, b) =>
+          compareDesc(new Date(a.date), new Date(b.date))
+        );
+
+        setCards(sortedCards);
       } catch (error) {
         console.log(error);
       }
