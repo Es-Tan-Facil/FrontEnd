@@ -11,11 +11,11 @@ export default function DonationCards() {
 
     return (
         <div id="Collaborate"className="md:h-[100vh] flex justify-center items-center flex-col pb-10">
-            <div class="flex justify-center items-center flex-col" >
+            <div className="flex justify-center items-center flex-col" >
                 <Subtitle subtitle="Nuestra causa" />
                 <Title title="Colabora con nosotros" />
             </div>
-            <div class="flex justify-center flex-wrap mt-1.5 gap-14" >
+            <div className="flex justify-center flex-wrap mt-1.5 gap-14" >
                 <CardKM />
                 <CardSchool />
                 <CardSchoolMaterial />
