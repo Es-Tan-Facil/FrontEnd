@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {Navbar, MobileNav, Typography, IconButton} from "@material-tailwind/react";
+import {Navbar, MobileNav, Typography, IconButton, Collapse} from "@material-tailwind/react";
 import Logo from '../../Assets/Pictures/Logo.svg'
 import LogIn from '../../Assets/Pictures/LogInICON.svg'
 import { Link } from "react-scroll";
@@ -192,9 +192,9 @@ export default function NavBar() {
 
           </div>
         </div>
-        <MobileNav open={openNav}>
+        <Collapse open={openNav}>
           {navList}
-        </MobileNav>
+        </Collapse>
       </Navbar>
 
     </>
