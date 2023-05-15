@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import HTTPService from '../../Services/HTTPService'
 import InputPhoto from '../../InputPhoto/InputPhoto'
 import { Alert } from "@material-tailwind/react";
@@ -8,7 +8,7 @@ import { WithRouter } from '../../Common/WithRouter';
 function NewsForm(props) {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [urlImg, setUrlImg] = useRef('');
+    const [urlImg, setUrlImg] = useState('');
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
 

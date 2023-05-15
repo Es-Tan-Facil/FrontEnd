@@ -1,31 +1,21 @@
 import React, { useState, useEffect } from "react";
 import {Navbar, Collapse, Typography, IconButton} from "@material-tailwind/react";
 import Logo from '../../Assets/Pictures/Logo.svg'
-import LogIn from '../../Assets/Pictures/LogInICON.svg'
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import AuthService from "../../Services/AuthService";
+import NavBarMenu from "../NavBarMenu/NavBarMenu.jsx";
+import NavBarLogIn from "../NavBarLogIn/NavBarLogIn";
 
 export default function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
-  const [currentUser, setCurrentUser] = useState(undefined);
-  const [showAdminBoard, setShowAdminBoard] = useState(false);
- 
-  React.useEffect(() => {
+  
+React.useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
-
-  useEffect(() => {
-    const user = AuthService.getCurrentUser();
-    if (user) {
-      setCurrentUser(user);
-      setShowAdminBoard(user.roles.includes("ROLE_ADMIN"));
-    }
-  }, [setCurrentUser,setShowAdminBoard])
-
    
 
   const navList = (
@@ -108,29 +98,35 @@ export default function NavBar() {
         </Link> 
       </Typography>
 
-{showAdminBoard ? (
       <Typography
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal">
-        <NavLink 
-        className="flex items-center cursor-pointer"  
-        to={"/admin"}>
-          Crear Noticias
-        </NavLink> 
-      </Typography> )
-      : (
-      <>
-      </>
-      )
-}
+        className="p-1 font-normal"
+      >
+        <Link
+          className="flex items-center cursor-pointer"
+          activeClass="active"
+          to="BusAnimation"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+          KM Recorridos
+        </Link>
+        
 
-      <NavLink to={"/login"} href=""><img 
-      className="mt-1 mr-4 h-10 cursor-pointer "
-      src={LogIn}
-      alt="LogInICON"
-        /></NavLink>
+      </Typography>
+
+      <NavBarMenu />
+      <ul/>
+
+      
+
+
+
+      
 
     </ul>
   );
@@ -188,12 +184,16 @@ export default function NavBar() {
               )}
             </IconButton>
 
+            <NavBarLogIn />
+
 
           </div>
         </div>
-        <Collapse open={openNav}>
+
+        <Collapse open={openNav} className="overflow-scroll">
           {navList}
         </Collapse>
+
       </Navbar>
 
     </>
