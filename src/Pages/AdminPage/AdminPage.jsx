@@ -2,6 +2,7 @@ import React from 'react'
 import NewsForm from '../../Components/NewsForm/NewsForm'
 import NavBar from '../../Components/NavBar/NavBar'
 import DonationForm from '../../Components/DonationForm/DonationForm'
+import NewsListAdmin from '../../Components/NewsListAdmin/NewsTodo'
 
 
 function AdminPage() {
@@ -16,6 +17,7 @@ function AdminPage() {
           <DonationForm />
         </div>
       </div>
+      <NewsListAdmin />
       </>
     )
   }

@@ -15,7 +15,7 @@ function DonationForm(props) {
         event.preventDefault();
         const data = {
            name:name,
-           km:km
+           kmDonated:km
             
         }
         

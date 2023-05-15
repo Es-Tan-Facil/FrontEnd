@@ -5,7 +5,7 @@ import AuthDonationHeader from '../DonationService/AuthDonationService'
 
 function HTTPDonationService () {
 
-  const url = 'http://localhost:8080/api/v1/news';
+  const url = 'http://localhost:8080/api/v1/donations';
 
   const getAllData = async () => {
     const response = await axios.get(`${url}`);
