@@ -33,7 +33,7 @@ function NewsSection() {
         ))}
       </div>
       <Link to="/noticias">
-        <Button size="lg" className="bg-[#51C8FC] mt-12 md:px-20">Ver más</Button>
+        <Button size="lg" title="Consulta más noticias" className="bg-[#51C8FC] mt-12 md:px-20">Ver más</Button>
       </Link>
     </div>
   );

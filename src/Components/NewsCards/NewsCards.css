@@ -4,10 +4,6 @@
  margin-top: 3vh;
 }
 
-#date{
-font-size: xx-small;
-}
-
 @media (max-width:420px){
 #CardBorder{
     width: 40vw;
