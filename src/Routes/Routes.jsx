@@ -4,6 +4,7 @@ import HomePage from "../Pages/HomePage/HomePage"
 import AdminPage from '../Pages/AdminPage/AdminPage';
 import LoginPage from '../Pages/LoginPage/LoginPage';
 import NewsPage from '../Pages/NewsPage/NewsPage';
+import Contact from '../Pages/Contact/Contact';
 
 function Routes() {
 
@@ -20,8 +21,12 @@ function Routes() {
         element: <AdminPage />
     },
     {
-        path: "/news",
+        path: "/noticias",
         element: <NewsPage />
+    },
+    {
+        path: "/contacto",
+        element: <Contact />
     }
     ])
 

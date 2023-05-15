@@ -32,7 +32,7 @@ function NewsSection() {
           <NewsCards key={card.id} card={card} />
         ))}
       </div>
-      <Link to="/news">
+      <Link to="/noticias">
         <Button size="lg" className="bg-[#51C8FC] mt-12 md:px-20">Ver más</Button>
       </Link>
     </div>
