@@ -3,7 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "../Pages/HomePage/HomePage"
 import AdminPage from '../Pages/AdminPage/AdminPage';
 import LoginPage from '../Pages/LoginPage/LoginPage';
-import News from '../Pages/News/News';
+import NewsPage from '../Pages/NewsPage/NewsPage';
 
 function Routes() {
 
@@ -21,7 +21,7 @@ function Routes() {
     },
     {
         path: "/news",
-        element: <News />
+        element: <NewsPage />
     }
     ])
 

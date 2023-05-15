@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import NewsCards from '../NewsCards/NewsCards.jsx';
 import HTTPService from '../../Services/HTTPService.jsx';
 import Title from '../Title/Title.jsx';
+import { Button } from "@material-tailwind/react";
+import { Link } from 'react-router-dom';
 
 
 function NewsSection() {
@@ -30,9 +32,10 @@ function NewsSection() {
           <NewsCards key={card.id} card={card} />
         ))}
       </div>
+      <Link to="/news">
+        <Button size="lg" className="bg-[#51C8FC] mt-12 md:px-20">Ver más</Button>
+      </Link>
     </div>
-
-
   );
 }
 

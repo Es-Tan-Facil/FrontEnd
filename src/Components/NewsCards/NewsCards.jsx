@@ -1,4 +1,3 @@
-
 import './NewsCards.css';
 import 'tailwindcss/tailwind.css';
 
