@@ -3,7 +3,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "../Pages/HomePage/HomePage"
 import AdminPage from '../Pages/AdminPage/AdminPage';
 import LoginPage from '../Pages/LoginPage/LoginPage';
-import News from '../Pages/News/News';
+import NewsPage from '../Pages/NewsPage/NewsPage';
+import Contact from '../Pages/Contact/Contact';
 
 function Routes() {
 
@@ -20,8 +21,12 @@ function Routes() {
         element: <AdminPage />
     },
     {
-        path: "/news",
-        element: <News />
+        path: "/noticias",
+        element: <NewsPage />
+    },
+    {
+        path: "/contacto",
+        element: <Contact />
     }
     ])
 

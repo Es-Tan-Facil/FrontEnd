@@ -30,6 +30,7 @@ function ButtonBackToTop() {
     <>
     {showButton && (
         <button id="btn-back-to-top"
+        title="Ir a inicio"
         onClick={scrollToTop}>
            🡹
         </button>

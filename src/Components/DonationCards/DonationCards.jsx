@@ -5,12 +5,14 @@ import CardMoreHelp from './CardMoreHelp';
 import CardSchoolMaterial from './CardSchoolMaterial';
 import CardSchool from './CardSchool';
 import CardKM from './CardKM';
+import { Button } from "@material-tailwind/react";
+import { Link } from 'react-router-dom';
 
 
 export default function DonationCards() {
 
     return (
-        <div id="Collaborate"className="md:h-[100vh] flex justify-center items-center flex-col pb-10">
+        <div id="Collaborate" className="md:h-[100vh] flex justify-center items-center flex-col pb-10">
             <div className="flex justify-center items-center flex-col" >
                 <Subtitle subtitle="Nuestra causa" />
                 <Title title="Colabora con nosotros" />
@@ -21,6 +23,9 @@ export default function DonationCards() {
                 <CardSchoolMaterial />
                 <CardMoreHelp />
             </div>
+            <Link to="/contacto">
+                <Button  title="Contacta con nosotros" size="lg" className='bg-[#51C8FC] mt-12 md:px-20'>Contacta</Button>
+            </Link>
         </div>
     )
 }
