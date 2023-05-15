@@ -32,12 +32,10 @@ function News() {
 
   const handlePreviousPage = () => {
     setCurrentPage(currentPage - 1);
-    window.scrollTo(0, 900); 
   };
 
   const handleNextPage = () => {
     setCurrentPage(currentPage + 1);
-    window.scrollTo(0, 900);
   };
 
   return (
