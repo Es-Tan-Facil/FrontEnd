@@ -1,9 +1,11 @@
 import axios from 'axios';
-import AuthDonationHeader from '../Services/Services/AuthDonationHeader';
+import AuthDonationHeader from '../DonationService/AuthDonationService'
+
+
 
 function HTTPDonationService () {
 
-  //const url = 'http://localhost:8080/api/v1/news';
+  const url = 'http://localhost:8080/api/v1/news';
 
   const getAllData = async () => {
     const response = await axios.get(`${url}`);
@@ -20,7 +22,7 @@ function HTTPDonationService () {
   const createData = async (data) => {
     console.log(data);
     
-    const response = await axios.post(`${url}`,data, {headers:{"Content-Type" : "application/json",  "Authorization":  AuthDoantionHeader() }});
+    const response = await axios.post(`${url}`,data, {headers:{"Content-Type" : "application/json",  "Authorization":  AuthDonationHeader() }});
   
     return response.data;
 
