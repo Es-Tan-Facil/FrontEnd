@@ -9,25 +9,20 @@ import background from '../../Assets/Pictures/mapa_back.svg'
 import NewsSection from '../../Components/NewsSection/NewsSection'
 import ButtonBackToTop from '../../Components/ButtonBackToTop/ButtonBackToTop'
 
-
-
-
 export default function HomePage() {
   return (
-    
-    <>
-    <div className="containerHome"> 
-    <img src={background} alt="imagen" />
-    </div>
-      <Header/>
-      <DonationCards />
-      <WhoAreWe />
-      <NewsSection />
-      <OurTrip />
-      <BusAnimation />
-      <ButtonBackToTop/>
-</>
-  )
 
-  
+    <>
+      <div className="containerHome">
+        <img src={background} alt="imagen" />
+      </div>
+      <Header data-testid="header" />
+      <DonationCards data-testid="donation-cards" />
+      <WhoAreWe data-testid="who-are-we" />
+      <NewsSection data-testid="news-section" />
+      <OurTrip data-testid="our-trip" />
+      <BusAnimation data-testid="bus-animation" />
+      <ButtonBackToTop data-testid="button-back-to-top" />
+    </>
+  )
 }
