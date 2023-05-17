@@ -35,7 +35,6 @@ const profileMenuItems = [
 function NavBarLogIn() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const closeMenu = () => setIsMenuOpen(false);
-    const [currentUser, setCurrentUser] = useState(undefined);
     const [showAdminBoard, setShowAdminBoard] = useState(false);
  
   
@@ -43,13 +42,12 @@ function NavBarLogIn() {
   useEffect(() => {
     const user = AuthService.getCurrentUser();
     if (user) {
-      setCurrentUser(user);
       setShowAdminBoard(user.roles.includes("ROLE_ADMIN"));
     }
 
     EventBus.on("logout", handleLogout);
 
-  }, [setCurrentUser,setShowAdminBoard])
+  }, [setShowAdminBoard])
 
   useEffect(() => {
     EventBus.remove("logout", handleLogout);
@@ -60,7 +58,6 @@ function NavBarLogIn() {
   const handleLogout = () => {
       AuthService.logout();
       setShowAdminBoard(false);
-      setCurrentUser(undefined);
     };
 
 
@@ -95,7 +92,7 @@ function NavBarLogIn() {
           return (
             <React.Fragment key={key}>
             
-                {admin == showAdminBoard && 
+                {admin === showAdminBoard && 
 
             <NavLink to={url}>
                 <MenuItem
