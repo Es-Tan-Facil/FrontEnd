@@ -3,6 +3,7 @@ import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
 import { animateScroll as scroll } from 'react-scroll';
 import ButtonBackToTop from './ButtonBackToTop';
+import '@testing-library/jest-dom/extend-expect';
 
 // Mockear el comportamiento esperado de la librería react-scroll
 jest.mock('react-scroll', () => ({
