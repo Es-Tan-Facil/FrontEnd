@@ -7,7 +7,6 @@ export default function Contact() {
     return (
         <>
             
-            <ContactSocial />
             <div data-testid="header-component">
                 <HeaderPages stateImg={false} />
             </div>
