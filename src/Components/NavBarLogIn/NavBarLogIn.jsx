@@ -1,26 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import {
-  Typography,
-  Button,
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-  Avatar,
-} from "@material-tailwind/react";
-import {
-  UserCircleIcon,
-  ChevronDownIcon,
-  Cog6ToothIcon,
-  InboxArrowDownIcon,
-  LifebuoyIcon,
-  PowerIcon,
-} from "@heroicons/react/24/outline";
+import { Typography, Button, Menu, MenuHandler, MenuList, MenuItem, Avatar} from "@material-tailwind/react";
+import { UserCircleIcon, ChevronDownIcon, Cog6ToothIcon, PowerIcon,} from "@heroicons/react/24/outline";
 
 import LogIn from '../../Assets/Pictures/LogInICON.svg'
-import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
 import AuthService from '../../Services/AuthService';
+import EventBus from "../../Common/EventBus";
 
 // profile menu component
 const profileMenuItems = [
@@ -28,19 +13,22 @@ const profileMenuItems = [
     label: "LogIn",
     icon: UserCircleIcon,
     url: "/login",
-    state: false
+    state: false,
+    event: false
   },
   {
     label: "Panel Administrador",
     icon: Cog6ToothIcon,
     url: "/admin",
-    state: true
+    state: true,
+    event: false
   },
   {
     label: "LogOut",
     icon: PowerIcon,
-    url: "/logout",
-    state: true
+    url: "",
+    state: true,
+    event: true
   },
 ];
 
@@ -58,7 +46,22 @@ function NavBarLogIn() {
       setCurrentUser(user);
       setShowAdminBoard(user.roles.includes("ROLE_ADMIN"));
     }
+
+    EventBus.on("logout", handleLogout);
+
   }, [setCurrentUser,setShowAdminBoard])
+
+  useEffect(() => {
+    EventBus.remove("logout", handleLogout);
+
+  }, [])
+
+  
+  const handleLogout = () => {
+      AuthService.logout();
+      setShowAdminBoard(false);
+      setCurrentUser(undefined);
+    };
 
 
   return (
@@ -86,7 +89,7 @@ function NavBarLogIn() {
       </MenuHandler>
 
       <MenuList className="p-1">
-        {profileMenuItems.map(({ label, icon, url, state }, key) => {
+        {profileMenuItems.map(({ label, icon, url, state, event }, key) => {
           const isLastItem = key === profileMenuItems.length - 1;
           const admin = state
           return (
@@ -113,6 +116,7 @@ function NavBarLogIn() {
                     variant="h6"
                     className="font-normal"
                     color={isLastItem ? "red" : "inherit"}
+                    onClick={{event} && handleLogout}
                 >
                     {label}
                 </Typography>

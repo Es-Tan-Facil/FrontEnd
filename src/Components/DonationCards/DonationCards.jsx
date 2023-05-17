@@ -23,7 +23,7 @@ export default function DonationCards() {
                 <CardSchoolMaterial />
                 <CardMoreHelp />
             </div>
-            <Link to="/contacto">
+            <Link to="/contact">
                 <Button  title="Contacta con nosotros" size="lg" className='bg-[#51C8FC] mt-12 md:px-20'>Contacta</Button>
             </Link>
         </div>
