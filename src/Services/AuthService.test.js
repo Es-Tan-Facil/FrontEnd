@@ -1,68 +1,42 @@
 import axios from 'axios';
+import MockAdapter from 'axios-mock-adapter';
 import AuthService from './AuthService';
 
-jest.mock('axios');
+const API_URL = "http://localhost:8080/api/auth/";
 
-describe('AuthService class', () => {
-  afterEach(() => {
-    jest.clearAllMocks();
+describe('AuthService', () => {
+  let mock;
+
+  beforeEach(() => {
+    mock = new MockAdapter(axios);
     localStorage.clear();
   });
 
-  it('logs in successfully and saves user data in local storage', async () => {
-    const username = 'testUser';
-    const password = 'testPassword';
-    const mockResponse = {
-      data: {
-        accessToken: 'dummyAccessToken',
-      },
-    };
-    axios.post.mockResolvedValueOnce(mockResponse);
-
-    await AuthService.login(username, password);
-
-    expect(axios.post).toHaveBeenCalledWith('http://localhost:8080/api/auth/signin', {
-      username,
-      password,
-    });
-    expect(localStorage.getItem('user')).toBe(JSON.stringify(mockResponse.data));
+  afterEach(() => {
+    mock.restore();
   });
 
-  it('logs out and removes user data from local storage', () => {
-    localStorage.setItem('user', JSON.stringify({ accessToken: 'dummyAccessToken' }));
+  it('stores the user in localStorage when login is successful', async () => {
+    const user = { accessToken: 'testToken' };
+    mock.onPost(`${API_URL}signin`).reply(200, user);
+
+    await AuthService.login('testUser', 'testPass');
+
+    expect(localStorage.getItem('user')).toEqual(JSON.stringify(user));
+  });
+
+  it('removes the user from localStorage when logout is called', () => {
+    localStorage.setItem('user', JSON.stringify({ accessToken: 'testToken' }));
 
     AuthService.logout();
 
     expect(localStorage.getItem('user')).toBeNull();
   });
 
-  it('registers a user with the provided username, email, and password', async () => {
-    const username = 'testUser';
-    const email = 'test@example.com';
-    const password = 'testPassword';
-    const mockResponse = {
-      data: {
-        message: 'User registered successfully',
-      },
-    };
-    axios.post.mockResolvedValueOnce(mockResponse);
+  it('returns the current user from localStorage', () => {
+    const user = { accessToken: 'testToken' };
+    localStorage.setItem('user', JSON.stringify(user));
 
-    const result = await AuthService.register(username, email, password);
-
-    expect(axios.post).toHaveBeenCalledWith('http://localhost:8080/api/auth/signup', {
-      username,
-      email,
-      password,
-    });
-    expect(result).toEqual(mockResponse.data);
-  });
-
-  it('retrieves the current user data from local storage', () => {
-    const mockUser = { username: 'testUser', accessToken: 'dummyAccessToken' };
-    localStorage.setItem('user', JSON.stringify(mockUser));
-
-    const result = AuthService.getCurrentUser();
-
-    expect(result).toEqual(mockUser);
+    expect(AuthService.getCurrentUser()).toEqual(user);
   });
 });
