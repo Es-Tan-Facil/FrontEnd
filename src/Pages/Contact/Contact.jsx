@@ -6,7 +6,7 @@ import HeaderPages from '../../Components/HeaderPages/HeaderPages'
 export default function Contact() {
     return (
         <>
-            <HeaderPages />
+            <HeaderPages stateImg={false} />
             <ContactSocial />
         </>
     )

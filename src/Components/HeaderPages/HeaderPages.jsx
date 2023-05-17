@@ -1,12 +1,12 @@
 import React from 'react'
-import ImgHeader from '../ImgHeader/ImgHeader'
 import NavBarPages from '../NavBarPages/NavBarPages'
+import ImgHeaderPages from '../ImgHeaderPages/ImgHeaderPages'
 
-function HeaderPages() {
+function HeaderPages({stateImg}) {
   return (
     <div className='header md:h-[100vh]'>
         <NavBarPages />
-        <ImgHeader/>
+        <ImgHeaderPages img={stateImg} />
     </div>
     
   )

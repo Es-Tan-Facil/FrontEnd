@@ -10,7 +10,7 @@ export default function NewsPage() {
             <div className="containerHome">
                 <img src={background} alt="imagen" />
             </div>
-            <HeaderPages />
+            <HeaderPages stateImg={true}/>
             <News />
             <ButtonBackToTop />
         </>
