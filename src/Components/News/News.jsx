@@ -7,7 +7,7 @@ import { compareDesc } from 'date-fns';
 function News() {
   const [cards, setCards] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const perPage = 3;
+  const perPage = 4;
 
   useEffect(() => {
     async function fetchNews() {
@@ -69,6 +69,3 @@ function News() {
 }
 
 export default News;
-
-
-

@@ -21,11 +21,11 @@ function Routes() {
         element: <AdminPage />
     },
     {
-        path: "/noticias",
+        path: "/news",
         element: <NewsPage />
     },
     {
-        path: "/contacto",
+        path: "/contact",
         element: <Contact />
     }
     ])

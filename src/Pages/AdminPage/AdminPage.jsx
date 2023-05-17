@@ -1,6 +1,6 @@
 import React from 'react'
 import NewsForm from '../../Components/NewsForm/NewsForm'
-import NavBar from '../../Components/NavBar/NavBar'
+import NavBarPages from '../../Components/NavBarPages/NavBarPages'
 
 function AdminPage() {
   return (

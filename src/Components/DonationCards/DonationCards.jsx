@@ -6,7 +6,7 @@ import CardSchoolMaterial from './CardSchoolMaterial';
 import CardSchool from './CardSchool';
 import CardKM from './CardKM';
 import { Button } from "@material-tailwind/react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 export default function DonationCards() {
@@ -31,7 +31,7 @@ export default function DonationCards() {
                     <CardMoreHelp />
                 </div>
             </div>
-            <Link to="/contacto">
+            <Link to="/contact">
                 <Button title="Contacta con nosotros" size="lg" className='bg-[#51C8FC] mt-12 md:px-20'>Contacta</Button>
             </Link>
         </div>

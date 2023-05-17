@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import {Navbar, Collapse, Typography, IconButton} from "@material-tailwind/react";
 import Logo from '../../Assets/Pictures/Logo.svg'
-import { Link } from "react-scroll";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import AuthService from "../../Services/AuthService";
 import NavBarMenu from "../NavBarMenu/NavBarMenu.jsx";
 import NavBarLogIn from "../NavBarLogIn/NavBarLogIn";
 
-export default function NavBar() {
+export default function NavBarPages() {
   const [openNav, setOpenNav] = React.useState(false);
   
 React.useEffect(() => {
@@ -32,13 +31,9 @@ React.useEffect(() => {
         <Link
           className="flex items-center cursor-pointer"
           activeClass="active"
-          to="Collaborate"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
+          to="/"
         >
-          Colabora
+          Inicio
         </Link>
 
       </Typography>
@@ -52,13 +47,9 @@ React.useEffect(() => {
         <Link
           className="flex items-center cursor-pointer"
           activeClass="active"
-          to="WhoAreWe"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
+          to="/news"
         >
-          Quiénes somos
+          Noticias
         </Link>
 
       </Typography>
@@ -72,56 +63,12 @@ React.useEffect(() => {
         <Link
           className="flex items-center cursor-pointer"
           activeClass="active"
-          to="LastNews"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
+          to="/contact"
         >
-          Últimas noticias
+          Contacto
         </Link> 
       </Typography>
 
-      <Typography
-        as="li"
-        variant="h5"
-        color="black"
-        className="p-1 font-normal">
-        <Link 
-        className="flex items-center cursor-pointer" 
-        activeClass="active" 
-        to="OurTrip" 
-        spy={true} 
-        smooth={true} 
-        offset={0} 
-        duration={500}>
-          Nuestro viaje
-        </Link> 
-      </Typography>
-
-      <Typography
-        as="li"
-        variant="h5"
-        color="black"
-        className="p-1 font-normal"
-      >
-        <Link
-          className="flex items-center cursor-pointer"
-          activeClass="active"
-          to="BusAnimation"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          KM Recorridos
-        </Link>
-        
-
-      </Typography>
-
-      <NavBarMenu />
-     
 
     </ul>
     
