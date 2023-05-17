@@ -11,7 +11,7 @@ function HTTPService () {
   };
 
   const getDonationById = async (id) => {
-    const response = await axios.get(`${url}/${id}`, { headers: AuthHeader() });
+    const response = await axios.get(`${url}/${id}`, { headers:{ "Authorization": AuthHeader() }});
     return response.data;
 
   };
@@ -27,19 +27,19 @@ function HTTPService () {
   };
 
   const updateDonation = async (id, data) => {
-    const response = await axios.put(`${url}/${id}`, data, { headers: AuthHeader() });
+    const response = await axios.put(`${url}/${id}`, data, { headers:{ "Authorization": AuthHeader() }});
     return response.data;
 
   };
 
   const deleteDonation = async (id) => {
-    const response = await axios.delete(`${url}/${id}`, { headers: AuthHeader()});
+    const response = await axios.delete(`${url}/${id}`,{ headers:{ "Authorization": AuthHeader() }});
     return response.data;
 
   };
   const getSumKmDonated = async () => {
     
-      const response = await axios.get(`${url}`, { headers: AuthHeader()});
+      const response = await axios.get(`${url}`, { headers:{ "Authorization": AuthHeader() }});
       return response.data;
     
   };

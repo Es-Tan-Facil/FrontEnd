@@ -11,7 +11,7 @@ function HTTPService () {
   };
 
   const getDataById = async (id) => {
-    const response = await axios.get(`${url}/${id}`, { headers: AuthHeader() });
+    const response = await axios.get(`${url}/${id}`, { headers:{ "Authorization": AuthHeader() }});
     return response.data;
 
   };
@@ -27,13 +27,13 @@ function HTTPService () {
   };
 
   const updateData = async (id, data) => {
-    const response = await axios.put(`${url}/${id}`, data, { headers: AuthHeader() });
+    const response = await axios.put(`${url}/${id}`, data, { headers:{ "Authorization": AuthHeader() }});
     return response.data;
 
   };
 
   const deleteData = async (id) => {
-    const response = await axios.delete(`${url}/${id}`, { headers: AuthHeader()});
+    const response = await axios.delete(`${url}/${id}`, { headers:{ "Authorization": AuthHeader() }});
     return response.data;
 
   };

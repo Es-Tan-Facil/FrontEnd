@@ -22,10 +22,10 @@ function NewsAdmin() {
     }, [HTTPService]);
 
 
-    async function handleEdit(news) {
+    async function handleEdit(cards) {
         try {
-          const updatedNews = { ...news, title: "Updated Title" }; 
-          const response = await HTTPService().updateData(news.id, updatedNews); 
+          const updatedNews = { ...cards }; 
+          const response = await HTTPService().updateData(cards.id, updatedNews); 
           console.log(response); 
         } catch (error) {
           console.error(error);
@@ -36,6 +36,7 @@ function NewsAdmin() {
         try {
             const response = await HTTPService().deleteData(cardId);
             setCards(cards.filter((card) => card.id !== cardId));
+            console.log(response); 
         } catch (error) {
             console.log(error);
         }
