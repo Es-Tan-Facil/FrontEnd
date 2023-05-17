@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import NewsCards from '../NewsCards/NewsCards.jsx';
-import HTTPService from '../../Services/Services/HTTPService.jsx';
+import HTTPService from '../../Services/HTTPService.jsx';
 import Title from '../Title/Title.jsx';
 
 

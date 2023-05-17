@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import HTTPDonationService from '../../Services/DonationService/HTTPDonationService'
+import HTTPDonationService from '../../Services/HTTPDonationService'
 import { Alert } from "@material-tailwind/react";
 
 
@@ -21,7 +21,7 @@ function DonationForm(props) {
         
         event.target.reset();
 
-        HTTPDonationService().createData(data)
+        HTTPDonationService().createDonation(data)
         .then(response => {
             setShowAlert(true);
             setAlertMessage('Se ha añadido correctamente.');
