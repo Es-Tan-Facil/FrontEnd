@@ -30,7 +30,6 @@ React.useEffect(() => {
       >
         <Link
           className="flex items-center cursor-pointer"
-          activeClass="active"
           to="/"
         >
           Inicio
@@ -46,7 +45,6 @@ React.useEffect(() => {
       >
         <Link
           className="flex items-center cursor-pointer"
-          activeClass="active"
           to="/news"
         >
           Noticias
@@ -62,7 +60,6 @@ React.useEffect(() => {
       >
         <Link
           className="flex items-center cursor-pointer"
-          activeClass="active"
           to="/contact"
         >
           Contacto

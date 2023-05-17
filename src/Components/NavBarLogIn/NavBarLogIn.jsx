@@ -113,7 +113,7 @@ function NavBarLogIn() {
                     variant="h6"
                     className="font-normal"
                     color={isLastItem ? "red" : "inherit"}
-                    onClick={{event} && handleLogout}
+                    onClick={event ? handleLogout : undefined}
                 >
                     {label}
                 </Typography>
