@@ -1,9 +1,17 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Subtitle from './Subtitle';
 import '@testing-library/jest-dom/extend-expect';
 
-test('renders subtitle correctly', () => {
-  render(<Subtitle subtitle="Test Subtitle" />);
-  expect(screen.getByText('Test Subtitle')).toBeInTheDocument();
+describe('Subtitle component', () => {
+  it('renders the subtitle correctly', () => {
+    const subtitleText = 'Subtítulo de prueba';
+    const { getByText } = render(<Subtitle subtitle={subtitleText} />);
+    const subtitleElement = getByText(subtitleText);
+    expect(subtitleElement).toBeInTheDocument();
+    expect(subtitleElement.tagName).toBe('H1');
+    expect(subtitleElement).toHaveStyle('fontSize: 32px');
+    expect(subtitleElement).toHaveStyle('color: rgba(255, 221, 89, 1)');
+    expect(subtitleElement).toHaveStyle('marginBottom: -5px');
+  });
 });
