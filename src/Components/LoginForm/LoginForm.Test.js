@@ -11,21 +11,21 @@ jest.mock('../../Services/AuthService', () => ({
 }));
 
 describe('LoginForm', () => {
-  it('debe cambiar correctamente el valor del usuario', () => {
+  it('Value of the user should be changed correctly', () => {
     const { getByLabelText } = render(<LoginForm />);
     const inputEl = getByLabelText(/usuario:/i);
     fireEvent.change(inputEl, { target: { value: 'ejemplo@ejemplo.com' } });
     expect(inputEl.value).toBe('ejemplo@ejemplo.com');
   });
 
-  it('debe cambiar correctamente el valor de la contraseña', () => {
+  it('Value of the password should be changed correctly', () => {
     const { getByLabelText } = render(<LoginForm />);
     const inputEl = getByLabelText(/contraseña:/i);
     fireEvent.change(inputEl, { target: { value: 'ejemplo12345' } });
     expect(inputEl.value).toBe('ejemplo12345');
   });
 
-  it('debe llamar a la función handleSubmit() al enviar el formulario', async () => {
+  it('should execute the function handleSubmit() when the form is sent', async () => {
     const navigateMock = jest.fn();
     const routerMock = {
       navigate: navigateMock,
