@@ -30,7 +30,7 @@ it('Display the button when it is required', () => {
 });
 
 it('Should execute the function scrollToTop() when the button is clicked', () => {
-  // Prueba inicial
+ 
   const { queryByTestId } = render(<ButtonBackToTop />);
   expect(queryByTestId('btn-back-to-top')).toBeNull();
 

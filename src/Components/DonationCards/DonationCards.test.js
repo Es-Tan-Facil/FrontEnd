@@ -48,5 +48,6 @@ describe("DonationCards", () => {
 
             expect(button).toBeInTheDocument();
             expect(button).toHaveTextContent("Contacta");
+            expect(button).toHaveClass('bg-[#51C8FC] mt-12 md:px-20');
     });
 });
