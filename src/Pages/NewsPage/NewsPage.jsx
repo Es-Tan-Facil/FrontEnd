@@ -1,8 +1,8 @@
 import React from 'react'
-import Header from '../../Components/Header/Header'
 import background from '../../Assets/Pictures/BackgroundAmerica.svg'
 import ButtonBackToTop from '../../Components/ButtonBackToTop/ButtonBackToTop'
 import News from '../../Components/News/News'
+import HeaderPages from '../../Components/HeaderPages/HeaderPages'
 
 export default function NewsPage() {
     return (
@@ -10,7 +10,7 @@ export default function NewsPage() {
             <div className="containerHome">
                 <img src={background} alt="imagen" />
             </div>
-            <Header />
+            <HeaderPages />
             <News />
             <ButtonBackToTop />
         </>
