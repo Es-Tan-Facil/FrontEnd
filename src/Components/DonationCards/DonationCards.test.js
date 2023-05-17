@@ -1,36 +1,52 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import DonationCards from './DonationCards';
+import { BrowserRouter as Router } from 'react-router-dom';
+import '@testing-library/jest-dom/extend-expect';
 
 
-describe('DonationCards', () => {
+describe('Donation Cards', () => {
+    const renderDonationCards = () => {
+        render(
+            <Router>
+                <DonationCards />
+            </Router>
+        );
+    };
+
     it('should render all the expected components', () => {
-        const { getByTestId } = render(<DonationCards />);
+        renderDonationCards();
 
-        const container = getByTestId('container');
-        const cardKM = getByTestId('card-km');
-        const cardSchool = getByTestId('card-school');
-        const cardSchoolMaterial = getByTestId('card-school-material');
-        const cardMoreHelp = getByTestId('card-more-help');
+        const componentData = [
+            { testId: 'container' },
+            { testId: 'card-km-component' },
+            { testId: 'card-school-component' },
+            { testId: 'card-school-material-component' },
+            { testId: 'card-more-help-component' },
+        ];
 
-        expect(container).toBeInTheDocument();
-        expect(cardKM).toBeInTheDocument();
-        expect(cardSchool).toBeInTheDocument();
-        expect(cardSchoolMaterial).toBeInTheDocument();
-        expect(cardMoreHelp).toBeInTheDocument();
+        componentData.forEach(({ testId }) => {
+            expect(screen.getByTestId(testId)).toBeInTheDocument();
+        });
     });
 });
 
-describe("Button", () => {
 
-    render(<DonationCards />);
-    const button = screen.getByRole("button");
+describe("DonationCards", () => {
+    const renderDonationCards = () => {
+        render(
+            <Router>
+                <DonationCards />
+            </Router>
+        );
+    };
 
-    test("Button Rendering", () => {
-        expect(button).toBeInTheDocument();
-    })
+    it('should render all the expected components', () => {
+        renderDonationCards();
 
-    test("Button Text", () => {
-        expect(button).toHaveTextContent("Contacta");
-    })
-})
+        const button = screen.getByRole("button");
+
+            expect(button).toBeInTheDocument();
+            expect(button).toHaveTextContent("Contacta");
+    });
+});
