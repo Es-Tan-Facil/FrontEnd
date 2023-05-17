@@ -24,7 +24,7 @@ export default function DonationCards() {
                 <CardMoreHelp data-testid="card-more-help"/>
             </div>
             <Link to="/contacto">
-                <Button  data-testid="button" title="Contacta con nosotros" size="lg" className='bg-[#51C8FC] mt-12 md:px-20'>Contacta</Button>
+                <Button title="Contacta con nosotros" size="lg" className='bg-[#51C8FC] mt-12 md:px-20'>Contacta</Button>
             </Link>
         </div>
     )

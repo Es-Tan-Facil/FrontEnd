@@ -14,15 +14,29 @@ export default function HomePage() {
 
     <>
       <div className="containerHome">
-        <img src={background} alt="imagen" />
+        <img data-testid="background-img" src={background} alt="imagen" />
       </div>
-      <Header data-testid="header" />
-      <DonationCards data-testid="donation-cards" />
-      <WhoAreWe data-testid="who-are-we" />
-      <NewsSection data-testid="news-section" />
-      <OurTrip data-testid="our-trip" />
-      <BusAnimation data-testid="bus-animation" />
-      <ButtonBackToTop data-testid="button-back-to-top" />
+      <div data-testid="header-component">
+        <Header />
+      </div>
+      <div data-testid="donation-cards-component">
+        <DonationCards />
+      </div>
+      <div data-testid="who-are-we-component">
+        <WhoAreWe />
+      </div>
+      <div data-testid="news-section-component">
+        <NewsSection />
+      </div>
+      <div data-testid="our-trip-component">
+        <OurTrip />
+      </div>
+      <div data-testid="bus-animation-component">
+        <BusAnimation />
+      </div>
+      <div data-testid="button-back-to-top-component">
+        <ButtonBackToTop />
+      </div>
     </>
   )
 }

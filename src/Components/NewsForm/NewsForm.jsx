@@ -8,7 +8,7 @@ import { WithRouter } from '../../Common/WithRouter';
 function NewsForm(props) {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [urlImg, setUrlImg] = useRef('');
+    const [urlImg, setUrlImg] = useState('');
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
 

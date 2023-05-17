@@ -1,30 +1,24 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import HomePage from './HomePage';
+import Contact from './Contact';
 import '@testing-library/jest-dom/extend-expect';
 
-describe('HomePage', () => {
-    const renderHomePage = () => {
+describe('Contact Page', () => {
+    const renderContactPage = () => {
         render(
             <Router>
-                <HomePage />
+                <Contact />
             </Router>
         );
     };
 
     it('should render all the expected components', () => {
-        renderHomePage();
+        renderContactPage();
 
         const componentData = [
-            { testId: 'background-img' },
             { testId: 'header-component' },
-            { testId: 'donation-cards-component' },
-            { testId: 'who-are-we-component' },
-            { testId: 'news-section-component' },
-            { testId: 'our-trip-component' },
-            { testId: 'bus-animation-component' },
-            { testId: 'button-back-to-top-component' },
+            { testId: 'contact-social-component' }
         ];
 
         componentData.forEach(({ testId }) => {

@@ -3,12 +3,16 @@ import NewsForm from '../../Components/NewsForm/NewsForm'
 import NavBar from '../../Components/NavBar/NavBar'
 
 function AdminPage() {
-    return (
-      <>
+  return (
+    <>
+      <div data-testid="navbar-component">
         <NavBar />
+      </div>
+      <div data-testid="news-form-component">
         <NewsForm />
-      </>
-    )
-  }
-  
-  export default AdminPage
+      </div>
+    </>
+  )
+}
+
+export default AdminPage
