@@ -6,7 +6,7 @@ function AdminPage() {
   return (
     <>
       <div data-testid="navbar-component">
-        <NavBar />
+        <NavBarPages />
       </div>
       <div data-testid="news-form-component">
         <NewsForm />

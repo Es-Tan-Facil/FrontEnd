@@ -6,7 +6,7 @@ import CardSchoolMaterial from './CardSchoolMaterial';
 import CardSchool from './CardSchool';
 import CardKM from './CardKM';
 import { Button } from "@material-tailwind/react";
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default function DonationCards() {

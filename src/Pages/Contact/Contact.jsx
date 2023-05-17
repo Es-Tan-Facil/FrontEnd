@@ -7,7 +7,7 @@ export default function Contact() {
     return (
         <>
             <div data-testid="header-component">
-                <Header />
+                <HeaderPages />
             </div>
             <div data-testid="contact-social-component">
                 <ContactSocial />
