@@ -6,7 +6,7 @@ import CardSchoolMaterial from './CardSchoolMaterial';
 import CardSchool from './CardSchool';
 import CardKM from './CardKM';
 import { Button } from "@material-tailwind/react";
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default function DonationCards() {
@@ -17,15 +17,23 @@ export default function DonationCards() {
                 <Subtitle subtitle="Nuestra causa" />
                 <Title title="Colabora con nosotros" />
             </div>
-            <div className="flex justify-center flex-wrap mt-1.5 gap-14" >
-                <CardKM />
-                <CardSchool />
-                <CardSchoolMaterial />
-                <CardMoreHelp />
+            <div data-testid="container" className="flex justify-center flex-wrap mt-1.5 gap-14" >
+                <div data-testid="card-km-component">
+                    <CardKM />
+                </div>
+                <div data-testid="card-school-component" >
+                    <CardSchool />
+                </div>
+                <div data-testid="card-school-material-component">
+                    <CardSchoolMaterial />
+                </div>
+                <div data-testid="card-more-help-component">
+                    <CardMoreHelp />
+                </div>
             </div>
-            <NavLink to="/contact">
-                <Button  title="Contacta con nosotros" size="lg" className='bg-[#51C8FC] mt-12 md:px-20'>Contacta</Button>
-            </NavLink>
+            <Link to="/contact">
+                <Button title="Contacta con nosotros" size="lg" className='bg-[#51C8FC] mt-12 md:px-20'>Contacta</Button>
+            </Link>
         </div>
     )
 }

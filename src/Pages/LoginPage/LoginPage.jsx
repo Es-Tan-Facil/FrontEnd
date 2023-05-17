@@ -3,12 +3,16 @@ import LoginForm from '../../Components/LoginForm/LoginForm'
 import NavBarPages from '../../Components/NavBarPages/NavBarPages'
 
 function LoginPage() {
-    return (
-      <>
+  return (
+    <>
+      <div data-testid="navbar-component">
         <NavBarPages />
+      </div>
+      <div data-testid="login-form-component">
         <LoginForm />
-      </>
-    )
-  }
-  
-  export default LoginPage
+      </div>
+    </>
+  )
+}
+
+export default LoginPage

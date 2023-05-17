@@ -8,9 +8,17 @@ export default function NewsPage() {
     return (
         <>
             <div className="containerHome">
-                <img src={background} alt="imagen" />
+                <img data-testid="background-img" src={background} alt="imagen" />
             </div>
-            <HeaderPages stateImg={true}/>
+            <div data-testid="header-component">
+                <HeaderPages stateImg={true}/>
+            </div>
+            <div data-testid="news-component">
+                <News />
+            </div>
+            <div data-testid="button-back-to-top-component">
+                <ButtonBackToTop />
+            </div>
             <News />
             <ButtonBackToTop />
         </>

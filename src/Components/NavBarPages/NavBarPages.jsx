@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {Navbar, Collapse, Typography, IconButton} from "@material-tailwind/react";
 import Logo from '../../Assets/Pictures/Logo.svg'
 import { Link, NavLink } from "react-router-dom";
-import AuthService from "../../Services/AuthService";
-import NavBarMenu from "../NavBarMenu/NavBarMenu.jsx";
 import NavBarLogIn from "../NavBarLogIn/NavBarLogIn";
 
 export default function NavBarPages() {

@@ -10,25 +10,34 @@ import NewsSection from '../../Components/NewsSection/NewsSection'
 import ButtonBackToTop from '../../Components/ButtonBackToTop/ButtonBackToTop'
 import NavBar from '../../Components/NavBar/NavBar'
 
-
-
-
 export default function HomePage() {
   return (
-    
-    <>
-    <div className="containerHome"> 
-    <img src={background} alt="imagen" />
-    </div>
-      <Header/>
-      <DonationCards />
-      <WhoAreWe />
-      <NewsSection />
-      <OurTrip />
-      <BusAnimation />
-      <ButtonBackToTop/>
-</>
-  )
 
-  
+    <>
+      <div className="containerHome">
+        <img data-testid="background-img" src={background} alt="imagen" />
+      </div>
+      <div data-testid="header-component">
+        <Header />
+      </div>
+      <div data-testid="donation-cards-component">
+        <DonationCards />
+      </div>
+      <div data-testid="who-are-we-component">
+        <WhoAreWe />
+      </div>
+      <div data-testid="news-section-component">
+        <NewsSection />
+      </div>
+      <div data-testid="our-trip-component">
+        <OurTrip />
+      </div>
+      <div data-testid="bus-animation-component">
+        <BusAnimation />
+      </div>
+      <div data-testid="button-back-to-top-component">
+        <ButtonBackToTop />
+      </div>
+    </>
+  )
 }
