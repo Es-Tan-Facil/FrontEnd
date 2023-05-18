@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import HTTPService from '../../Services/HTTPService'
-import InputPhoto from '../../InputPhoto/InputPhoto'
+import InputPhoto from '../InputPhoto/InputPhoto'
 import { Alert } from "@material-tailwind/react";
 import { WithRouter } from '../../Common/WithRouter';
 
