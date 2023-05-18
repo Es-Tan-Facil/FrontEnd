@@ -27,8 +27,8 @@ function EditModal({ showModal, setShowModal, editedCard, setEditedCard, handleS
                         
 
                         <div className="flex justify-end">
-                            <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-2" onClick={handleSave}>Save</button>
-                            <button type="button" className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded" onClick={handleCancel}>Cancel</button>
+                            <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded mr-2" onClick={handleSave}>Save</button>
+                            <button type="button" className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded" onClick={handleCancel}>Cancel</button>
                         </div>
                     </form>
                 </div>

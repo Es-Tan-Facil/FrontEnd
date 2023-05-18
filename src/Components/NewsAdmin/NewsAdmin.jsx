@@ -108,13 +108,13 @@ function NewsAdmin() {
               <>
                 <button
                   onClick={handleSave}
-                  className="mr-2 bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
+                  className="mr-2 bg-green-500 hover:bg-green-700 text-white font-semibold py-1 px-2 rounded"
                 >
                   Save
                 </button>
                 <button
                   onClick={handleCancel}
-                  className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded"
+                  className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded"
                 >
                   Cancel
                 </button>
@@ -122,14 +122,14 @@ function NewsAdmin() {
             ) : (
               <button
                 onClick={() => handleEdit(card)}
-                className="mr-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
+                className="mr-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded"
               >
                 Edit
               </button>
             )}
             <button
               onClick={() => handleDelete(card.id)}
-              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded"
+              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded"
             >
               Delete
             </button>
