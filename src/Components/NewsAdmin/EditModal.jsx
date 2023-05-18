@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import InputPhoto from '../InputPhoto/InputPhoto.jsx';
 
 function EditModal({ showModal, setShowModal, editedCard, setEditedCard, handleSave, handleCancel, handleInputChange }) {
     const closeModal = () => {
         setShowModal(false);
         setEditedCard(null);
     };
+
+    const [urlImg, setUrlImg] = useState('');
+
 
     return (
         showModal && (
@@ -15,15 +19,19 @@ function EditModal({ showModal, setShowModal, editedCard, setEditedCard, handleS
                     <form onSubmit={handleSave}>
                         <div className="mb-4">
                             <label htmlFor="title" className="block font-semibold mb-2">Title</label>
-                            <input type="text" name="title" value={editedCard.title} onChange={handleInputChange} className="w-full border border-gray-300 rounded py-2 px-3"/>
+                            <input type="text" name="title" value={editedCard.title} onChange={handleInputChange} className="w-full border border-gray-300 rounded py-2 px-3" />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="description" className="block font-semibold mb-2">Description</label>
                             <textarea name="description" value={editedCard.description} onChange={handleInputChange} className="w-full border border-gray-300 rounded py-2 px-3"></textarea>
                         </div>
+                        
+                        <div className="mb-4">
+                            <InputPhoto setUrlImg={setUrlImg} />
+                        </div>
 
                         <div className="flex justify-end">
-                            <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-2">Save</button>
+                            <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-2" onClick={handleSave}>Save</button>
                             <button type="button" className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded" onClick={handleCancel}>Cancel</button>
                         </div>
                     </form>

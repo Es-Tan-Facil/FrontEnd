@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import HTTPService from '../../Services/HTTPService.jsx';
 import Title from '../Title/Title.jsx';
-import InputPhoto from '../InputPhoto/InputPhoto.jsx';
 import EditModal from './EditModal.jsx';
 
 function NewsAdmin() {
   const [cards, setCards] = useState([]);
   const [editMode, setEditMode] = useState(false);
   const [editedCard, setEditedCard] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     async function fetchNews() {
@@ -34,23 +34,27 @@ function NewsAdmin() {
 
   const handleEdit = (card) => {
     setEditMode(true);
-    setEditedCard(card);
+    setEditedCard({ ...card, urlImg: card.urlImg });
+    setShowModal(true);
   };
 
   const handleSave = async () => {
     try {
       const updatedCard = await HTTPService().updateData(editedCard.id, editedCard);
-      setCards(cards.map((card) => (card.id === updatedCard.id ? updatedCard : card)));
+      setCards(cards.map((card) => (card.id === editedCard.id ? updatedCard : card)));
       setEditMode(false);
       setEditedCard(null);
+      setShowModal(false);
     } catch (error) {
       console.log(error);
     }
   };
 
+
   const handleCancel = () => {
     setEditMode(false);
     setEditedCard(null);
+    setShowModal(false);
   };
 
   const handleInputChange = (event) => {
@@ -61,6 +65,7 @@ function NewsAdmin() {
     }));
   };
 
+
   return (
     <div id="NewsAdmin" className="md:h-[100vh] flex flex-col items-center">
       <Title title="Últimas Noticias" />
@@ -70,7 +75,8 @@ function NewsAdmin() {
             <img src={card.urlImg} alt={card.title} className="w-48 h-48 object-cover" />
             {editMode && editedCard && editedCard.id === card.id ? (
               <>
-                <input type="text" name="title" value={editedCard.title} onChange={handleInputChange} />
+
+                <input type="text" name="title" value={editedCard.title} onChange={handleInputChange} className="w-full border border-gray-300 rounded py-2 px-3" />
                 <textarea name="description" value={editedCard.description} onChange={handleInputChange}></textarea>
               </>
             ) : (
@@ -82,27 +88,26 @@ function NewsAdmin() {
             <small>{card.date}</small>
             {editMode && editedCard && editedCard.id === card.id ? (
               <>
-                <button onClick={handleSave} className="mr-2 bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">Guardar</button>
-                <button onClick={handleCancel} className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Cancelar</button>
               </>
             ) : (
-              <button onClick={() => handleEdit(card)} className="mr-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Editar</button>
-            )}
+
+              <button onClick={() => handleEdit(card)} className="mr-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Editar</button>)}
             <button onClick={() => handleDelete(card.id)} className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Borrar</button>
           </div>
         ))}
       </div>
-      {editMode && editedCard && (
-        <EditModal
-          showModal={editMode}
-          setShowModal={setEditMode}
-          editedCard={editedCard}
-          setEditedCard={setEditedCard}
-          handleSave={handleSave}
-          handleCancel={handleCancel}
-          handleInputChange={handleInputChange}
-        />
-      )}
+
+      <EditModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        editedCard={editedCard}
+        setEditedCard={setEditedCard}
+        handleSave={handleSave}
+        handleCancel={handleCancel}
+        handleInputChange={handleInputChange}
+
+      />
+
     </div>
   );
 }
