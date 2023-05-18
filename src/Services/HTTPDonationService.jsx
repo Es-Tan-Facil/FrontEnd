@@ -1,7 +1,7 @@
 import axios from 'axios';
 import AuthHeader from './AuthHeader';
 
-function HTTPService () {
+function HTTPDonationService () {
 
   const url = 'http://localhost:8080/api/v1/donations';
 
@@ -37,9 +37,9 @@ function HTTPService () {
     return response.data;
 
   };
-  const getSumKmDonated = async () => {
+  const getTotalKms = async () => {
     
-      const response = await axios.get(`${url}`, { headers:{ "Authorization": AuthHeader() }});
+      const response = await axios.get(`${url}/total-kms-donated`);
       return response.data;
     
   };
@@ -49,10 +49,10 @@ function HTTPService () {
     createDonation,
     updateDonation,
     deleteDonation,
-    getSumKmDonated,
+    getTotalKms,
     url
 
   };
 };
 
-export default HTTPService;
+export default HTTPDonationService;

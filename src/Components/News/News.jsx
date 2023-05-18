@@ -13,7 +13,7 @@ function News() {
     async function fetchNews() {
       try {
         const response = await HTTPService().getAllData();
-        console.info(response);
+       
 
         const sortedCards = response.sort((a, b) =>
           compareDesc(new Date(a.date), new Date(b.date))
@@ -21,7 +21,7 @@ function News() {
 
         setCards(sortedCards);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     }
 
