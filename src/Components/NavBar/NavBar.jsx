@@ -3,7 +3,6 @@ import {Navbar, Collapse, Typography, IconButton} from "@material-tailwind/react
 import Logo from '../../Assets/Pictures/Logo.svg'
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
-import AuthService from "../../Services/AuthService";
 import NavBarMenu from "../NavBarMenu/NavBarMenu.jsx";
 import NavBarLogIn from "../NavBarLogIn/NavBarLogIn";
 
