@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 export default function DonationCards() {
 
     return (
-        <div id="Collaborate" className="md:h-[100vh] flex justify-center items-center flex-col pb-10">
+        <div id="Collaborate" className="md:h-[100vh] flex justify-center items-center flex-col pb-10 mt-12">
             <div className="flex justify-center items-center flex-col" >
                 <Subtitle subtitle="Nuestra causa" />
                 <Title title="Colabora con nosotros" />
