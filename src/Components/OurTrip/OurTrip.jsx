@@ -5,7 +5,7 @@ import './OurTrip.css'
 
 export default function OurTrip() {
     return (
-        <div id="OurTrip" className="flex justify-center items-center flex-row flex-wrap gap-20 py-4">
+        <div id="OurTrip" className="flex justify-center items-center flex-row flex-wrap gap-20 md:py-4 md:h-[100vh]">
             <div id="textTrip" className="text-justify">
                 <Title title="Nuestro viaje" />
                 <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
