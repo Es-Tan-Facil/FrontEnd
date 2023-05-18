@@ -38,9 +38,9 @@ const BusAnimation = () => {
     
   return (
     
-    <div id="BusAnimation" className='h-44 md:h-[100vh]'>
+    <div id="BusAnimation" className='h-44 md:h-[100vh] pt-28'>
       <Counter />
-      <div className=' h-full'>
+      <div>
           <img src={background} alt="" className='BackgroundImg ' /> 
       </div > 
       
