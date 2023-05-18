@@ -30,7 +30,7 @@ function NewsForm(props) {
         .then(response => {
             setShowAlert(true);
             setAlertMessage('El post se ha creado exitosamente');
-            props.router.navigate("/news");
+            props.router.navigate("/admin");
         })
         .catch(error => {
             setShowAlert(true);

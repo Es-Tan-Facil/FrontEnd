@@ -19,8 +19,7 @@ export default function NewsPage() {
             <div data-testid="button-back-to-top-component">
                 <ButtonBackToTop />
             </div>
-            <News />
-            <ButtonBackToTop />
+            
         </>
     )
 }
