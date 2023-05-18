@@ -38,7 +38,7 @@ export default function ContactSocial() {
                     target="_blank"
                     rel="noopener noreferrer">
                     <Card
-                        className="mt-6 h-60 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#38B5FF] cursor-pointer"
+                        className="mt-6 h-60 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#51C8FC] cursor-pointer"
                         title="Ir a Instagram"
                     >
                         <CardBody>
@@ -54,7 +54,7 @@ export default function ContactSocial() {
                     target="_blank"
                     rel="noopener noreferrer">
                     <Card
-                        className="mt-6 h-60 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#38B5FF] cursor-pointer"
+                        className="mt-6 h-60 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#51C8FC] cursor-pointer"
                         title="Ir a WhatsApp"
                     >
                         <CardBody>
