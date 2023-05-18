@@ -14,7 +14,7 @@ function ButtonBackToTop() {
   }, []);
 
   const handleScroll = () => {
-    if (window.scrollY > 1000) {
+    if (window.scrollY > 900) {
       setShowButton(true);
     } else {
       setShowButton(false);
