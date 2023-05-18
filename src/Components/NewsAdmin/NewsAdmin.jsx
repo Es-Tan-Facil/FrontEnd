@@ -44,7 +44,7 @@ function NewsAdmin() {
       const formData = new FormData();
       formData.append('title', editedCard.title);
       formData.append('description', editedCard.description);
-      
+
 
       const updatedCard = await HTTPService().updateData(editedCard.id, editedCard);
       setCards(cards.map((card) => (card.id === editedCard.id ? updatedCard : card)));
@@ -70,7 +70,7 @@ function NewsAdmin() {
     }));
   };
 
- 
+
 
   return (
     <div id="NewsAdmin" className="md:h-[100vh] flex flex-col items-center">
@@ -81,21 +81,13 @@ function NewsAdmin() {
             <img src={card.urlImg} alt={card.title} className="w-48 h-48 object-cover" />
             {editMode && editedCard && editedCard.id === card.id ? (
               <>
-                
-                <input
-                  type="text"
-                  name="title"
-                  value={editedCard.title}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded py-2 px-3"
-                />
-                
-                <textarea
-                  name="description"
-                  value={editedCard.description}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded py-2 px-3"
-                ></textarea>
+
+                <input type="text" name="title" value={editedCard.title}
+                  onChange={handleInputChange} className="w-full border border-gray-300 rounded py-2 px-3" />
+
+                <textarea name="description" value={editedCard.description}
+                  onChange={handleInputChange} className="w-full border border-gray-300 rounded py-2 px-3">
+                </textarea>
               </>
             ) : (
               <>
@@ -108,30 +100,21 @@ function NewsAdmin() {
               <>
                 <button
                   onClick={handleSave}
-                  className="mr-2 bg-green-500 hover:bg-green-700 text-white font-semibold py-1 px-2 rounded"
-                >
-                  Save
+                  className="mr-2 bg-green-500 hover:bg-green-700 text-white font-semibold py-1 px-2 rounded">Save
                 </button>
                 <button
                   onClick={handleCancel}
-                  className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded"
-                >
-                  Cancel
+                  className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Cancel
                 </button>
               </>
             ) : (
               <button
                 onClick={() => handleEdit(card)}
-                className="mr-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded"
-              >
-                Edit
+                className="mr-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded">Edit
               </button>
             )}
-            <button
-              onClick={() => handleDelete(card.id)}
-              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded"
-            >
-              Delete
+            <button onClick={() => handleDelete(card.id)}
+              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Delete
             </button>
           </div>
         ))}
@@ -144,7 +127,7 @@ function NewsAdmin() {
         handleSave={handleSave}
         handleCancel={handleCancel}
         handleInputChange={handleInputChange}
-        
+
       />
     </div>
   );
