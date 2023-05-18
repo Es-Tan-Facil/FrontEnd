@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 import HTTPService from '../../Services/HTTPService.jsx';
 import Title from '../Title/Title.jsx';
-import EditModal from './EditModal.jsx';
+import EditModal from '../NewsAdmin/EditModal.jsx';
 
 function NewsAdmin() {
   const [cards, setCards] = useState([]);
@@ -34,12 +35,17 @@ function NewsAdmin() {
 
   const handleEdit = (card) => {
     setEditMode(true);
-    setEditedCard({ ...card, urlImg: card.urlImg });
+    setEditedCard(card);
     setShowModal(true);
   };
 
   const handleSave = async () => {
     try {
+      const formData = new FormData();
+      formData.append('title', editedCard.title);
+      formData.append('description', editedCard.description);
+      
+
       const updatedCard = await HTTPService().updateData(editedCard.id, editedCard);
       setCards(cards.map((card) => (card.id === editedCard.id ? updatedCard : card)));
       setEditMode(false);
@@ -49,7 +55,6 @@ function NewsAdmin() {
       console.log(error);
     }
   };
-
 
   const handleCancel = () => {
     setEditMode(false);
@@ -65,6 +70,7 @@ function NewsAdmin() {
     }));
   };
 
+ 
 
   return (
     <div id="NewsAdmin" className="md:h-[100vh] flex flex-col items-center">
@@ -75,9 +81,21 @@ function NewsAdmin() {
             <img src={card.urlImg} alt={card.title} className="w-48 h-48 object-cover" />
             {editMode && editedCard && editedCard.id === card.id ? (
               <>
-
-                <input type="text" name="title" value={editedCard.title} onChange={handleInputChange} className="w-full border border-gray-300 rounded py-2 px-3" />
-                <textarea name="description" value={editedCard.description} onChange={handleInputChange}></textarea>
+                
+                <input
+                  type="text"
+                  name="title"
+                  value={editedCard.title}
+                  onChange={handleInputChange}
+                  className="w-full border border-gray-300 rounded py-2 px-3"
+                />
+                
+                <textarea
+                  name="description"
+                  value={editedCard.description}
+                  onChange={handleInputChange}
+                  className="w-full border border-gray-300 rounded py-2 px-3"
+                ></textarea>
               </>
             ) : (
               <>
@@ -88,15 +106,36 @@ function NewsAdmin() {
             <small>{card.date}</small>
             {editMode && editedCard && editedCard.id === card.id ? (
               <>
+                <button
+                  onClick={handleSave}
+                  className="mr-2 bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
+                >
+                  Save
+                </button>
+                <button
+                  onClick={handleCancel}
+                  className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded"
+                >
+                  Cancel
+                </button>
               </>
             ) : (
-
-              <button onClick={() => handleEdit(card)} className="mr-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Editar</button>)}
-            <button onClick={() => handleDelete(card.id)} className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Borrar</button>
+              <button
+                onClick={() => handleEdit(card)}
+                className="mr-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
+              >
+                Edit
+              </button>
+            )}
+            <button
+              onClick={() => handleDelete(card.id)}
+              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded"
+            >
+              Delete
+            </button>
           </div>
         ))}
       </div>
-
       <EditModal
         showModal={showModal}
         setShowModal={setShowModal}
@@ -105,9 +144,8 @@ function NewsAdmin() {
         handleSave={handleSave}
         handleCancel={handleCancel}
         handleInputChange={handleInputChange}
-
+        
       />
-
     </div>
   );
 }
