@@ -4,7 +4,7 @@
 
 .BackgroundImg {
   position: absolute;
-  z-index: 0;
+  z-index: -3;
   width: 100%;
   bottom: 0;
 }

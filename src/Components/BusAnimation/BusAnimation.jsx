@@ -3,7 +3,8 @@ import background from '../../Assets/Pictures/background.svg'
 import bus from '../../Assets/Pictures/bus.svg'
 import './BusAnimation.css'
 import { useState, useEffect } from 'react'
-import axios from 'axios';
+import HTTPDonationService from '../../Services/HTTPDonationService'
+import Counter from '../../Counter/Counter'
 
 
 const BusAnimation = () => {
@@ -11,15 +12,22 @@ const BusAnimation = () => {
   const [totalKm, setTotalKm] = useState(0);
   const [posX, setPosX] = useState(0);
 
-  useEffect(() => {
-    axios.get('http://localhost:8080/api/v1/donations/total-kms-donated')
-      .then(res => {
-        setTotalKm(res.data);
-      })
-      .catch(err => console.error(err));
-  }, []);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await HTTPDonationService().getTotalKms();
+        setTotalKm(response);
+       } catch (error) {
+        console.error(error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+  
+
+   useEffect(() => {
    
     const maxKm = 1175;
     const maxPosX = 84;
@@ -30,8 +38,9 @@ const BusAnimation = () => {
     
   return (
     
-    <div id="BusAnimation" className='h-44 md:h-[100vh]'>
-      <div className=' h-full'>
+    <div id="BusAnimation" className='h-44 md:h-[100vh] pt-28'>
+      <Counter />
+      <div>
           <img src={background} alt="" className='BackgroundImg ' /> 
       </div > 
       
