@@ -18,7 +18,10 @@
  
   #imageTrip,
    #textTrip {
-       width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+       width: 80%;
        margin-bottom: 5%;
        margin: 0 10px;
     }

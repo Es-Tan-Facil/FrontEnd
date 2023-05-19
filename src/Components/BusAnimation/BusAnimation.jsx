@@ -4,7 +4,7 @@ import bus from '../../Assets/Pictures/bus.svg'
 import './BusAnimation.css'
 import { useState, useEffect } from 'react'
 import HTTPDonationService from '../../Services/HTTPDonationService'
-import Counter from '../../Counter/Counter'
+import Counter from '../Counter/Counter'
 
 
 const BusAnimation = () => {
@@ -38,13 +38,16 @@ const BusAnimation = () => {
     
   return (
     
-    <div id="BusAnimation" className='h-80 md:h-[100vh] md:pt-28'>
+    <div id="BusAnimation" className='md:h-[100vh] md:pt-28 h-80'>
+      <div>
       <Counter />
+      </div>
+      
       <div>
           <img src={background} alt="" className='BackgroundImg ' /> 
       </div > 
       
-      <div className="sub_div md:bottom-8">
+      <div className="sub_div md:bottom-8 ">
         <img src={bus} alt="" className='BusImg' style={{ transform: `translate(${posX}vw)` }} />
       </div>
     </div>

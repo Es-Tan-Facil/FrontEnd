@@ -26,7 +26,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal"
+        className="p-1 font-normal text-base md:text-lg lg:text-xl"
       >
         <Link
           className="flex items-center cursor-pointer"
@@ -46,7 +46,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal"
+        className="p-1 font-normal text-base md:text-lg lg:text-xl"
       >
         <Link
           className="flex items-center cursor-pointer"
@@ -66,7 +66,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal"
+        className="p-1 font-normal text-base md:text-lg lg:text-xl"
       >
         <Link
           className="flex items-center cursor-pointer"
@@ -85,7 +85,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal">
+        className="p-1 font-normal text-base md:text-lg lg:text-xl">
         <Link 
         className="flex items-center cursor-pointer" 
         activeClass="active" 
@@ -102,7 +102,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal"
+        className="p-1 font-normal text-base md:text-lg lg:text-xl"
       >
         <Link
           className="flex items-center cursor-pointer"

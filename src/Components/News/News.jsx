@@ -3,6 +3,7 @@ import HTTPService from '../../Services/HTTPService.jsx';
 import Title from '../Title/Title.jsx';
 import NewPrototype from '../NewPrototype/NewProtype.jsx';
 import { compareDesc } from 'date-fns';
+import StainTitle from '../Stain/StainTitle.jsx'
 
 function News() {
   const [cards, setCards] = useState([]);
@@ -40,7 +41,8 @@ function News() {
 
   return (
     <div className="flex flex-col items-center mt-12">
-      <Title id="News" title="Últimas Noticias" />
+      <Title id="News" title="Noticias" hidden="hidden"/>
+      <StainTitle  hidden="hidden"/>
       <div className="w-4/5 md:w-2/5 mx-auto">
         {cards.slice(startIndex, startIndex + perPage).map((item) => (
           <div key={item.id} className="mb-4 mt-10">
