@@ -16,7 +16,7 @@ function NewsForm(props) {
     
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+        
         const data = {
             title: title,
             description: description,
