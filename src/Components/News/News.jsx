@@ -41,7 +41,7 @@ function News() {
   return (
     <div className="flex flex-col items-center mt-12">
       <Title id="News" title="Últimas Noticias" />
-      <div className="w-4/5 mx-auto md:w-2/5 mx-auto">
+      <div className="w-4/5 md:w-2/5 mx-auto">
         {cards.slice(startIndex, startIndex + perPage).map((item) => (
           <div key={item.id} className="mb-4 mt-10">
             <NewPrototype card={item} />
