@@ -7,7 +7,7 @@ import Map from '../../Assets/Pictures/mapa.svg'
 
 export default function OurTrip() {
     return (
-        <div id="OurTrip" className="flex justify-center items-center flex-row flex-wrap gap-20 md:py-4 md:h-[100vh] mt-12">
+        <div id="OurTrip" className="flex justify-center items-center flex-row flex-wrap md:justify-start gap-20 md:py-4 md:h-[100vh] mt-12">
             <div id="imageTrip" className="md:hidden flex justify-center w-1/4 min-w-[55%] max-w-[55%] ">
                 <img src={Map} alt="imagen" className=" w-3/4 "/>
             </div>
