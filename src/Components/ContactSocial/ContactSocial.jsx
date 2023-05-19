@@ -2,11 +2,14 @@ import React from 'react'
 import Title from '../Title/Title'
 import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { Card, CardBody, Typography } from "@material-tailwind/react";
+import StainTitle from "../Stain/StainTitle"
 
 export default function ContactSocial() {
+    
     return (
-        <div className="flex flex-col items-center mt-12 w-4/5  md:w-3/5 mx-auto mb-[20vh]">
-            <Title title="Contacto" />
+        <div className="flex flex-col items-center mt-16 w-4/5  md:w-3/5 mx-auto mb-[20vh]">
+            <Title title="Contacto" hidden="hidden"/>
+            <StainTitle  hidden="hidden"/>
             <h2 className="text-[2rem] mt-7 text-center">
                 ¿Te gustaría participar en la Campaña es Tan Fácil?{" "}
                 <span className="text-[black] font-bold">Súmate a la movida.</span>

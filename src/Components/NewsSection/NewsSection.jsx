@@ -4,6 +4,7 @@ import HTTPService from '../../Services/HTTPService.jsx';
 import Title from '../Title/Title.jsx';
 import { Button } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
+import StainTitle from '../Stain/StainTitle.jsx';
 
 
 function NewsSection() {
@@ -26,7 +27,8 @@ function NewsSection() {
 
 
     <div  id="LastNews" className="md:h-[100vh] flex justify-center items-center flex-col mt-12">
-      <Title title="Últimas Noticias" />
+      <Title  title="Últimas Noticias" />
+      <StainTitle />
       <div className="flex justify-center flex-wrap gap-12">
         {cards.slice(-3).reverse().map((card) => (
           <NewsCards key={card.id} card={card} />

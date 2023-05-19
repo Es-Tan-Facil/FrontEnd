@@ -1,5 +1,5 @@
 #WhoAreWe {
-  
+
    width: 100%;
 }
 
@@ -16,10 +16,16 @@
 
 @media screen and (max-width: 768px) {
 
-  #imageWho,
-  #textWho {
+   #imageWho,
+   #textWho {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 80%;
       margin-bottom: 5%;
       margin: 0 10px;
+
+
    }
 }
