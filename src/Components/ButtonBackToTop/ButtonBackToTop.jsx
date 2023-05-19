@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import '../ButtonBackToTop/ButtonBackToTop.css'
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
 function ButtonBackToTop() {
 
@@ -32,7 +33,7 @@ function ButtonBackToTop() {
         <button id="btn-back-to-top"
         title="Ir a inicio"
         onClick={scrollToTop}>
-         ⇧
+        <BsFillArrowUpCircleFill />
         </button>
         
       )}

@@ -6,7 +6,6 @@ import HeaderPages from '../../Components/HeaderPages/HeaderPages'
 export default function NewsPage() {
     return (
         <>
-           
             <div data-testid="header-component">
                 <HeaderPages stateImg={true}/>
             </div>
