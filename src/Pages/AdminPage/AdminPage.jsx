@@ -22,14 +22,16 @@ function AdminPage() {
         <div className="w-1/2 ml-4">
           <DonationForm />
         </div>
+        
+      </div>
+      <div>
+        <DonationsAdmin />
       </div>
       <div>
         <NewsAdmin />
       </div>
 
-      <div>
-        <DonationsAdmin />
-      </div>
+    
     </>
   )
 }

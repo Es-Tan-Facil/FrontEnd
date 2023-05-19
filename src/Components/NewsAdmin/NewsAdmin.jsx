@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import HTTPService from '../../Services/HTTPService.jsx';
 import Title from '../Title/Title.jsx';
