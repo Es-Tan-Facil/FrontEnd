@@ -12,10 +12,18 @@
 .sub_div {
   position: absolute;
   width: 15vw;
-  top: 85%
+  top: 86%
 }
 
 .BusImg {
   z-index: 1;
   width: 15vw;
 }
+
+@media screen and (max-width: 768px) {
+ .sub_div {
+      display: flex;
+      top: 91%;
+      
+    }
+ }
