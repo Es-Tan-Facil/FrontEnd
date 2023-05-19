@@ -10,6 +10,12 @@ function DonationForm(props) {
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
 
+    const handleChange = event => {
+        const result = event.target.value.replace(/[^a-z]/gi, '');
+    
+        setName(result);
+      };
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -44,7 +50,7 @@ function DonationForm(props) {
             <form onSubmit={handleSubmit}>
             <div className="mb-4">
                     <label className="block text-gray-700 font-bold mb-2" htmlFor="name">Nombre y Apellidos</label>
-                    <input onChange={(event) => { setName(event.target.value) }} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Ingresa el título" autoFocus />
+                    <input onChange={handleChange} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" value={name} placeholder="Ingresa el título" autoFocus />
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 font-bold mb-2" htmlFor="km">Km</label>
