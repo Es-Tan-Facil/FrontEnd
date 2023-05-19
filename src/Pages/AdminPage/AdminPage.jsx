@@ -3,6 +3,7 @@ import NewsForm from '../../Components/NewsForm/NewsForm'
 import NavBarPages from '../../Components/NavBarPages/NavBarPages'
 import DonationForm from '../../Components/DonationForm/DonationForm'
 import NewsAdmin from '../../Components/NewsAdmin/NewsAdmin'
+import DonationsAdmin from '../../Components/DoantionsAdmin/DonationsAdmin'
 
 
 
@@ -24,6 +25,10 @@ function AdminPage() {
       </div>
       <div>
         <NewsAdmin />
+      </div>
+
+      <div>
+        <DonationsAdmin />
       </div>
     </>
   )

@@ -73,7 +73,7 @@ function NewsAdmin() {
 
 
   return (
-    <div id="NewsAdmin" className="md:h-[100vh] flex flex-col items-center">
+    <div id="NewsAdmin" className=" flex flex-col items-center">
       <Title title="Últimas Noticias" />
       <div className="flex flex-wrap gap-12">
         {cards.reverse().map((card) => (
