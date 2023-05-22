@@ -33,7 +33,7 @@ function NavBarMenu() {
   const renderItems = navListMenuItems.map(({ title, url }) => (
     <Link to={url} key={title}>
       <MenuItem>
-        <Typography variant="h5" color="blue-gray" className="font-normal">
+        <Typography variant="h5" color="blue-gray" className="font-normal text-base md:text-lg lg:text-xl">
           {title}
         </Typography>   
       </MenuItem>
@@ -49,7 +49,7 @@ function NavBarMenu() {
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
             >
-              Pages
+              Páginas
               <ChevronDownIcon
                 strokeWidth={2}
                 className={`h-3 w-3 transition-transform ${

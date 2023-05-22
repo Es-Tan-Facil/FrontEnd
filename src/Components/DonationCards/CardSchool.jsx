@@ -16,7 +16,7 @@ export default function CardSchool() {
 
     return (
 
-        <Card onClick={handleOpen} className="mt-6 h-80 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#38B5FF] cursor-pointer">
+        <Card onClick={handleOpen} className="mt-6 h-80 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#51C8FC] cursor-pointer">
             <CardBody>
                 <Typography variant="h5" color="black" className="mb-2 text-center">
                     Apadrina una escuela

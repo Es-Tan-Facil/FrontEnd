@@ -7,15 +7,17 @@ import CardSchool from './CardSchool';
 import CardKM from './CardKM';
 import { Button } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
+import StainTitle from '../Stain/StainTitle';
 
 
 export default function DonationCards() {
 
     return (
-        <div id="Collaborate" className="md:h-[100vh] flex justify-center items-center flex-col pb-10">
+        <div id="Collaborate" className="md:h-[100vh] flex justify-center items-center flex-col pb-10 mt-12">
             <div className="flex justify-center items-center flex-col" >
                 <Subtitle subtitle="Nuestra causa" />
                 <Title title="Colabora con nosotros" />
+                <StainTitle />
             </div>
             <div data-testid="container" className="flex justify-center flex-wrap mt-1.5 gap-14" >
                 <div data-testid="card-km-component">
