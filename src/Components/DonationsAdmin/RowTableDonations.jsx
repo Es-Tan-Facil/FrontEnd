@@ -91,13 +91,13 @@ function RowTableDonations({ donation }) {
           {editing ? (
             <>
               <button
-                className="mr-2 bg-[#51C8FC] hover:bg-[#FFDD59] text-white font-semibold ml-4 mt-2 py-1 px-2 rounded"
+                className="mr-2 bg-[#51C8FC] hover:bg-blue-700 text-white font-semibold ml-4 mt-2 py-1 px-2 rounded"
                 onClick={handleSave}
               >
                 Guardar
               </button>
               <button
-                className="bg-[#FFDD59] hover:bg-[#51C8FC] text-white font-semibold py-1 px-2 rounded"
+                className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded"
                 onClick={handleCancel}
               >
                 Cancelar
@@ -106,13 +106,13 @@ function RowTableDonations({ donation }) {
           ) : (
             <>
               <button
-                className="mr-2 bg-[#51C8FC] hover:bg-[#FFDD59] text-white font-semibold ml-4 mt-2 py-1 px-2 rounded"
+                className="mr-2 bg-[#51C8FC] hover:bg-blue-700 text-white font-semibold ml-4 mt-2 py-1 px-2 rounded"
                 onClick={handleEdit}
               >
                 Editar
               </button>
               <button
-                className="bg-[#FFDD59] hover:bg-[#51C8FC] text-white font-semibold py-1 px-2 rounded"
+                className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded"
                 onClick={handleDelete}
               >
                 Eliminar
