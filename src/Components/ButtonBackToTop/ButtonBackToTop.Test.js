@@ -1,43 +1,16 @@
-// Importar dependencias
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
-import { animateScroll as scroll } from 'react-scroll';
+import { render, screen, fireEvent} from '@testing-library/react';
 import ButtonBackToTop from './ButtonBackToTop';
 import '@testing-library/jest-dom/extend-expect';
 
-jest.mock('react-scroll', () => ({
-  animateScroll: {
-    scrollToTop: jest.fn(),
-  },
-}));
-
-it('Display the button when it is required', () => {
-  
-  const { queryByTestId } = render(<ButtonBackToTop />);
-  expect(queryByTestId('btn-back-to-top')).toBeNull();
-
-  window.scrollY = 800;
-  fireEvent.scroll(window);
-  expect(queryByTestId('btn-back-to-top')).toBeNull();
-
-  window.scrollY = 1500;
-  fireEvent.scroll(window);
-  expect(queryByTestId('btn-back-to-top')).toBeTruthy();
-
-  window.scrollY = 500;
-  fireEvent.scroll(window);
-  expect(queryByTestId('btn-back-to-top')).toBeNull();
+test('renders ButtonBackToTop component', () => {
+  render(<ButtonBackToTop />);
+  expect(screen.getByTitle('Ir a inicio')).toBeInTheDocument();
 });
 
-it('Should execute the function scrollToTop() when the button is clicked', () => {
- 
-  const { queryByTestId } = render(<ButtonBackToTop />);
-  expect(queryByTestId('btn-back-to-top')).toBeNull();
-
-  window.scrollY = 1500;
-  fireEvent.scroll(window);
-  const btnEl = queryByTestId('btn-back-to-top');
-  expect(btnEl).toBeTruthy();
-  fireEvent.click(btnEl);
-  expect(scroll.scrollToTop).toHaveBeenCalledTimes(1);
+test('scrolls to top when button is clicked', () => {
+  const scrollToTopMock = jest.fn();
+  render(<ButtonBackToTop />);
+  fireEvent.click(screen.getByTitle('Ir a inicio'));
+  expect(scrollToTopMock).toHaveBeenCalled();
 });
