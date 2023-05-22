@@ -29,7 +29,7 @@ function RowTableDonations({ donation }) {
         })
         .catch(console.error);
     }
-  }, [showUpdatedData]);
+  }, [showUpdatedData, donation.id]);
 
   if (!editedData) {
     return null;

@@ -10,7 +10,7 @@ import DonationsAdmin from '../../Components/DonationsAdmin/DonationsAdmin'
 function AdminPage() {
 
 
-const [reload, setReload] = useState([])
+const [reload, setReload] = useState(false)
 
   
   return (

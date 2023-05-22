@@ -18,7 +18,6 @@ function HTTPDonationService () {
   
 
   const createDonation = async (data) => {
-    console.log(data);
     
     const response = await axios.post(`${url}`,data, {headers:{"Content-Type" : "application/json",  "Authorization":  AuthHeader() }});
   
