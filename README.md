@@ -25,10 +25,10 @@ El proyecto cuenta con una parte de backend y de frontend, lo que permite una in
 
 ## Autor(es)
 
-- Carlos Castro: [carloscastro@example.com](mailto:carloscastro@example.com)
-- Lucia Tirado Turiel: [lucia@example.com](mailto:lucia@example.com)
-- Celia Cueria Barcia: [celiacueria1999@gmail.com](mailto:celiacueria@gmail.com)
-- Elena Pulido Alvaré: [elena@example.com](mailto:elena@example.com)
-- Raul Villar: [raul@example.com](mailto:raul@example.com)
+- Carlos Sánchez Yerga (Scrum master): [carloscastro@example.com](https://github.com/Holapueblodev)
+- Lucia Tirado Turiel (Product Owner): [lucia@example.com](https://github.com/Luciatt)
+- Celia Cueria Barcia (Developer): [celiacueria1999@gmail.com](https://github.com/celiacueria))
+- Elena Pulido Alvaré (Developer): [elena@example.com](https://github.com/elenapulido))
+- Raul Villar (Developer): [raul@example.com](https://github.com/RaulVillar)
 
 
