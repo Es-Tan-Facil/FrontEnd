@@ -42,10 +42,10 @@ El proyecto cuenta con una parte de backend y de frontend, lo que permite una in
 
 ## Autor(es)
 
-- Carlos Sánchez Yerga (Scrum master): [carloscastro@example.com](https://github.com/Holapueblodev)
-- Lucia Tirado Turiel (Product Owner): [lucia@example.com](https://github.com/Luciatt)
-- Celia Cueria Barcia (Developer): [celiacueria1999@gmail.com](https://github.com/celiacueria))
-- Elena Pulido Alvaré (Developer): [elena@example.com](https://github.com/elenapulido))
-- Raul Villar (Developer): [raul@example.com](https://github.com/RaulVillar)
+- [Carlos Sánchez Yerga (Scrum master) ](https://github.com/Holapueblodev)
+- [Lucia Tirado Turiel (Product Owner)](https://github.com/Luciatt)
+- [Celia Cueria Barcia (Developer)](https://github.com/celiacueria))
+- [Elena Pulido Alvaré (Developer)](https://github.com/elenapulido))
+- [Raul Villar (Developer)](https://github.com/RaulVillar)
 
 
