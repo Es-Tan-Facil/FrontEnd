@@ -23,5 +23,12 @@ El proyecto cuenta con una parte de backend y de frontend, lo que permite una in
 8. En otra terminal, inicia la aplicación frontend ejecutando `npm start` en el directorio principal del proyecto.
 9. Accede a la aplicación en tu navegador web ingresando la dirección `http://localhost:3000`.
 
+## Autor(es)
+
+- Carlos Castro: [carloscastro@example.com](mailto:carloscastro@example.com)
+- Lucia Tirado Turiel: [lucia@example.com](mailto:lucia@example.com)
+- Celia Cueria Barcia: [celiacueria1999@gmail.com](mailto:celiacueria@gmail.com)
+- Elena Pulido Alvaré: [elena@example.com](mailto:elena@example.com)
+- Raul Villar: [raul@example.com](mailto:raul@example.com)
 
 
