@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import HTTPService from '../../Services/HTTPService.jsx';
 import Title from '../Title/Title.jsx';
 import EditModal from '../NewsAdmin/EditModal.jsx';
+import StainTitle from '../Stain/StainTitle.jsx';
 
 function NewsAdmin() {
   const [cards, setCards] = useState([]);
@@ -74,6 +75,7 @@ function NewsAdmin() {
   return (
     <div id="NewsAdmin" className=" flex flex-col items-center w-4/5 md:w-2/5 mx-auto mb-10">
       <Title title="Noticias" />
+      <StainTitle />
       <div className="flex flex-wrap gap-12 mt-10">
         {cards.reverse().map((card) => (
           <div className="border-4 border-[#51C8FC] p-5 rounded-tl-none rounded-br-none rounded-tr-3xl rounded-bl-3xl" key={card.id}>
