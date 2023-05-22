@@ -26,3 +26,11 @@
        margin: 0 10px;
     }
  }
+
+ .containerHome {
+    z-index: -10;
+    height: auto;
+    position: absolute;
+    margin-left: 10vw;
+    transform: translateY(-35%);
+}

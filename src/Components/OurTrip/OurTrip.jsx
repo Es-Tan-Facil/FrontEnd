@@ -4,11 +4,15 @@ import Text from '../Text/Text'
 import './OurTrip.css'
 import Map from '../../Assets/Pictures/mapa.svg'
 import StainTitle from '../Stain/StainTitle'
+import background from '../../Assets/Pictures/mapa_back.svg'
 
 
 export default function OurTrip() {
     return (
         <div id="OurTrip" className=" md:justify-start flex justify-center items-center flex-row flex-wrap gap-20 md:py-4 md:h-[100vh] mt-12 md:ml-40">
+            <div className="containerHome hidden md:block">
+                <img data-testid="background-img" src={background} alt="imagen" />
+            </div>
             <div id="imageTrip" className=" flex justify-center w-1/4 min-w-[55%] max-w-[55%] md:hidden ">
                 <img src={Map} alt="imagen" className=" w-3/4 "/>
             </div>

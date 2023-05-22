@@ -15,7 +15,7 @@ function NewsAdmin() {
         const response = await HTTPService().getAllData();
         setCards(response);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     }
 

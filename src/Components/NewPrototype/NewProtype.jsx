@@ -10,7 +10,7 @@ export default function NewPrototype({ card }) {
     return (
 
         <div >
-            <img  src={card.urlImg} alt="News Image" />
+            <img  src={card.urlImg} alt="" />
             <p className="text-xs my-4 text-gray-700">{day} de {month} de {year}</p>
             <h4 className="text-2xl font-bold my-4 h-10 text-[#51C8FC] ">{card.title}</h4>
             <p className="text-lg text-gray-700 text-justify"> {card.description} </p>

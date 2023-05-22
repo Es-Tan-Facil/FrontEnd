@@ -5,7 +5,6 @@ import WhoAreWe from '../../Components/WhoAreWe/WhoAreWe'
 import OurTrip from '../../Components/OurTrip/OurTrip'
 import Header from '../../Components/Header/Header'
 import BusAnimation from '../../Components/BusAnimation/BusAnimation'
-import background from '../../Assets/Pictures/mapa_back.svg'
 import NewsSection from '../../Components/NewsSection/NewsSection'
 import ButtonBackToTop from '../../Components/ButtonBackToTop/ButtonBackToTop'
 
@@ -14,9 +13,7 @@ export default function HomePage() {
   return (
 
     <>
-      <div className="containerHome hidden md:block">
-        <img data-testid="background-img" src={background} alt="imagen" />
-      </div>
+      
       <div data-testid="header-component">
         <Header />
       </div>
