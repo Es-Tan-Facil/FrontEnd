@@ -4,7 +4,7 @@ import Title from '../Title/Title.jsx';
 import EditModal from '../NewsAdmin/EditModal.jsx';
 import StainTitle from '../Stain/StainTitle.jsx';
 
-function NewsAdmin() {
+function NewsAdmin({ setReload, reload }) {
   const [cards, setCards] = useState([]);
   const [editMode, setEditMode] = useState(false);
   const [editedCard, setEditedCard] = useState(null);
@@ -21,7 +21,11 @@ function NewsAdmin() {
     }
 
     fetchNews();
-  }, []);
+    if(reload){
+
+    setReload(false)
+    }
+  }, [reload, setReload]);
 
   const handleDelete = async (cardId) => {
     try {
@@ -39,7 +43,8 @@ function NewsAdmin() {
     setShowModal(true);
   };
 
-  const handleSave = async () => {
+  const handleSave = async (event) => {
+    event.preventDefault();
     try {
       const formData = new FormData();
       formData.append('title', editedCard.title);
@@ -51,6 +56,7 @@ function NewsAdmin() {
       setEditMode(false);
       setEditedCard(null);
       setShowModal(false);
+      setReload(true);
     } catch (error) {
       console.log(error);
     }
@@ -89,6 +95,7 @@ function NewsAdmin() {
                 <textarea name="description" value={editedCard.description}
                   onChange={handleInputChange} className="w-full border border-gray-300 rounded py-2 px-3">
                 </textarea>
+
               </>
             ) : (
               <>
@@ -99,14 +106,7 @@ function NewsAdmin() {
             <small>{card.date}</small>
             {editMode && editedCard && editedCard.id === card.id ? (
               <>
-                <button
-                  onClick={handleSave}
-                  className="mr-2 bg-green-500 hover:bg-green-700 text-white font-semibold py-1 px-2 rounded">Guardar
-                </button>
-                <button
-                  onClick={handleCancel}
-                  className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Cancelar
-                </button>
+
               </>
             ) : (
               <button

@@ -32,7 +32,7 @@ const [reload, setReload] = useState(false)
         <DonationsAdmin reload={reload} setReload={setReload}/>
       </div>
       <div>
-        <NewsAdmin />
+        <NewsAdmin reload={reload} setReload={setReload}/>
       </div>
 
 
