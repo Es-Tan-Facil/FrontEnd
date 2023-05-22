@@ -3,6 +3,8 @@ Es Tan Fácil es un proyecto que tiene como objetivo ayudar a las escuelas rural
 
 El proyecto cuenta con una parte de backend y de frontend, lo que permite una interacción completa con los usuarios y facilita la gestión de los recursos y donaciones.
 
+<blockquote class="imgur-embed-pub" lang="es" data-id="a/qld20s9" data-context="false" ><a href="//imgur.com/a/qld20s9"></a></blockquote><script async src="https://imgur.com/a/qld20s9" charset="utf-8"></script>
+
 ## Características principales
 
 - Registro y autenticación de usuarios.
