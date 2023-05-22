@@ -2,9 +2,11 @@
 Es Tan Fácil es un proyecto que tiene como objetivo ayudar a las escuelas rurales del valle proporcionándoles útiles escolares y llevando a los niños a conocer nuevos lugares. Este proyecto tiene su sede en San Luis, Argentina y es llevado a cabo de manera autónoma por su fundador, Carlos Castro. Se busca la colaboración de personas y empresas para lograr el éxito de esta iniciativa. Este proyecto fue llevado a cabo por alumnos de Factoría F5 como proyecto pedagógico final 
 
 El proyecto cuenta con una parte de backend y de frontend, lo que permite una interacción completa con los usuarios y facilita la gestión de los recursos y donaciones.
-<div style="display: flex; flex-direction: row;">
-<img  src='https://i.postimg.cc/8zgMhFbK/mobile-7.png' border='0' alt='EsTanFacil'/> 
-<img  src='https://i.postimg.cc/VLxpnFTx/mobile.gif' border='0' alt='EsTanFacil'/> 
+<div >
+<img style="display: block; margin: 0 auto; text-align: center; vertical-align: middle; max-width: 100%; max-height: 100%;
+style="display: block; margin: 0 auto; text-align: center; vertical-align: middle; max-width: 100%; max-height: 100%; src='https://i.postimg.cc/8zgMhFbK/mobile-7.png' border='0' alt='EsTanFacil'/> 
+<img style="display: block; margin: 0 auto; text-align: center; vertical-align: middle; max-width: 100%; max-height: 100%;
+style="display: block; margin: 0 auto; text-align: center; vertical-align: middle; max-width: 100%; max-height: 100%;  src='https://i.postimg.cc/VLxpnFTx/mobile.gif' border='0' alt='EsTanFacil'/> 
 </div>
 
 ## Características principales
@@ -39,17 +41,19 @@ El proyecto cuenta con una parte de backend y de frontend, lo que permite una in
 3. Abre una terminal y navega hasta el directorio del proyecto.
 4. Ejecuta el comando `npm install` para instalar las dependencias del frontend.
 5. Navega hasta el directorio del backend y ejecuta `npm install` para instalar las dependencias del backend.
-6. Configura las variables de entorno necesarias, como las credenciales de la base de datos y las claves de API, siguiendo las instrucciones en el archivo `.env.example`.
-7. Inicia el servidor del backend ejecutando `npm start` en el directorio correspondiente.
-8. En otra terminal, inicia la aplicación frontend ejecutando `npm start` en el directorio principal del proyecto.
-9. Accede a la aplicación en tu navegador web ingresando la dirección `http://localhost:3000`.
+6. Inicia el servidor del backend ejecutando `npm start` en el directorio correspondiente.
+7. En otra terminal, inicia la aplicación frontend ejecutando `npm start` en el directorio principal del proyecto.
+8. Accede a la aplicación en tu navegador web ingresando la dirección `http://localhost:3000`.
 
-## Autor(es)
+## Autores
 
 - [Carlos Sánchez Yerga (Scrum master) ](https://github.com/Holapueblodev)
 - [Lucia Tirado Turiel (Product Owner)](https://github.com/Luciatt)
-- [Celia Cueria Barcia (Developer)](https://github.com/celiacueria))
-- [Elena Pulido Alvaré (Developer)](https://github.com/elenapulido))
+- [Celia Cueria Barcia (Developer)](https://github.com/celiacueria)
+- [Elena Pulido Alvaré (Developer)](https://github.com/elenapulido)
 - [Raul Villar (Developer)](https://github.com/RaulVillar)
 
+## Agradecimientos
+
+Agradecemos a Factoría F5 y a nuestros formadores por darnos las herramientas para poder lograr realizar un proyecto así. También agradecemos a Carlos Castro por confiar en nosotros para poder llevarlo a cabo.
 
