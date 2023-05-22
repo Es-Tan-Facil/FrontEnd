@@ -3,10 +3,14 @@ import NewsForm from '../../Components/NewsForm/NewsForm'
 import NavBarPages from '../../Components/NavBarPages/NavBarPages'
 import DonationForm from '../../Components/DonationForm/DonationForm'
 import NewsAdmin from '../../Components/NewsAdmin/NewsAdmin'
+import { useState } from 'react'
 
 
 
 function AdminPage() {
+  const [reload, setReload] = useState(false)
+
+
   return (
     <>
       
@@ -23,7 +27,7 @@ function AdminPage() {
         </div>
       </div>
       <div>
-        <NewsAdmin />
+        <NewsAdmin reload={reload} setReload={setReload}/>
       </div>
     </>
   )
