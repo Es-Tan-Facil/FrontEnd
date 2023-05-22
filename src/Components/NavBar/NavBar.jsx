@@ -29,7 +29,7 @@ React.useEffect(() => {
         className="p-1 font-normal text-base md:text-lg lg:text-xl"
       >
         <Link
-          className="flex items-center cursor-pointer"
+          className="flex items-center cursor-pointer hover:translate-y-1 hover:transition-all duration-300"
           activeClass="active"
           to="Collaborate"
           spy={true}
@@ -49,7 +49,7 @@ React.useEffect(() => {
         className="p-1 font-normal text-base md:text-lg lg:text-xl"
       >
         <Link
-          className="flex items-center cursor-pointer"
+          className="flex items-center cursor-pointer hover:translate-y-1 hover:transition-all duration-300"
           activeClass="active"
           to="WhoAreWe"
           spy={true}
@@ -69,7 +69,7 @@ React.useEffect(() => {
         className="p-1 font-normal text-base md:text-lg lg:text-xl"
       >
         <Link
-          className="flex items-center cursor-pointer"
+          className="flex items-center cursor-pointer hover:translate-y-1 hover:transition-all duration-300"
           activeClass="active"
           to="LastNews"
           spy={true}
@@ -87,7 +87,7 @@ React.useEffect(() => {
         color="black"
         className="p-1 font-normal text-base md:text-lg lg:text-xl">
         <Link 
-        className="flex items-center cursor-pointer" 
+        className="flex items-center cursor-pointer hover:translate-y-1 hover:transition-all duration-300" 
         activeClass="active" 
         to="OurTrip" 
         spy={true} 
@@ -102,7 +102,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal text-base md:text-lg lg:text-xl"
+        className="p-1 font-normal text-base md:text-lg lg:text-xl hover:translate-y-1 hover:transition-all duration-300"
       >
         <Link
           className="flex items-center cursor-pointer"

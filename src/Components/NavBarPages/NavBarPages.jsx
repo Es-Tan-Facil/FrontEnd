@@ -24,7 +24,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal text-base md:text-lg lg:text-xl"
+        className="p-1 font-normal text-base md:text-lg lg:text-xl hover:translate-y-1 hover:transition-all duration-300"
       >
         <Link
           className="flex items-center cursor-pointer"
@@ -39,7 +39,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal text-base md:text-lg lg:text-xl"
+        className="p-1 font-normal text-base md:text-lg lg:text-xl hover:translate-y-1 hover:transition-all duration-300"
       >
         <Link
           className="flex items-center cursor-pointer"
@@ -54,7 +54,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal text-base md:text-lg lg:text-xl"
+        className="p-1 font-normal text-base md:text-lg lg:text-xl hover:translate-y-1 hover:transition-all duration-300"
       >
         <Link
           className="flex items-center cursor-pointer"
