@@ -66,13 +66,13 @@ function DonationForm({ setReload }) {
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 font-bold mb-2" htmlFor="km">Km</label>
-                    <input value={km} onChange={(event) => { setKm(event.target.value) }} className="appearance-none border border-[#51C8FC] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="km" type="text" placeholder="Ingresa el título" autoFocus />
+                    <input onChange={(event) => { setKm(event.target.value) }} className="appearance-none border border-[#51C8FC] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="km" type="text" value={km} placeholder="Ingresa el título" autoFocus />
                 </div>
                 <div className="mb-4">
-                    <button className="bg-[#51C8FC] hover:bg-[#FFDD59] text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="submit" content='Enviar' icon='like'>Enviar</button>
+                    <button className="bg-[#51C8FC] hover:bg-blue-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="submit" content='Enviar' icon='like'>Enviar</button>
                 </div>
                 <div className="flex items-center justify-between">
-                    <button className="bg-[#FFDD59] hover:bg-[#51C8FC] text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="button" onClick={handleCancel}>Cancelar</button>
+                    <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="button" onClick={handleCancel}>Cancelar</button>
                 </div>
             </form>
 

@@ -59,11 +59,11 @@ function NewsForm(props) {
                     <InputPhoto setUrlImg={setUrlImg} />
                 </div>
                 <div className="mb-4">
-                    <button className="bg-[#51C8FC] hover:bg-[#FFDD59] text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="submit" content='Enviar' icon='like'>Enviar</button>
+                    <button className="bg-[#51C8FC] hover:bg-blue-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="submit" content='Enviar' icon='like'>Enviar</button>
 
                 </div>
                 <div className="flex items-center justify-between">
-                    <button className="bg-[#FFDD59] hover:bg-[#51C8FC] text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="button">Cancelar</button>
+                    <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="button">Cancelar</button>
                 </div>
             </form>
            
