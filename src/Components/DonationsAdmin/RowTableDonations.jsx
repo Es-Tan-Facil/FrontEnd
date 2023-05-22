@@ -6,6 +6,7 @@ function RowTableDonations({ donation }) {
   const [editedData, setEditedData] = useState({ ...donation });
   const [showUpdatedData, setShowUpdatedData] = useState(false);
 
+  
   const handleDelete = () => {
     if (window.confirm('¿Está seguro de que desea eliminar este elemento?')) {
       HTTPDonationService()
@@ -17,10 +18,10 @@ function RowTableDonations({ donation }) {
     }
   };
 
- 
+
   useEffect(() => {
     if (showUpdatedData) {
-      setEditedData(null); 
+      setEditedData(null);
       HTTPDonationService()
         .getDonationById(donation.id)
         .then((updatedData) => {
@@ -31,10 +32,10 @@ function RowTableDonations({ donation }) {
   }, [showUpdatedData]);
 
   if (!editedData) {
-    return null; 
+    return null;
   }
 
-  
+
   const handleEdit = () => {
     setEditing(true);
     setEditedData({ ...donation });
@@ -47,6 +48,11 @@ function RowTableDonations({ donation }) {
       .then(() => {
         setEditing(false);
         setShowUpdatedData(true);
+        return HTTPDonationService().getDonationById(donation.id);
+      })
+      .then((updatedData) => {
+        setEditedData(updatedData);
+       
       })
       .catch(console.error);
   };
@@ -116,8 +122,8 @@ function RowTableDonations({ donation }) {
 
         </td>
       </tr>
-     </>
+    </>
   );
- }
+}
 
- export default RowTableDonations;
+export default RowTableDonations;
