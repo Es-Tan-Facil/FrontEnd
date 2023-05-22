@@ -8,13 +8,13 @@ import BusAnimation from '../../Components/BusAnimation/BusAnimation'
 import background from '../../Assets/Pictures/mapa_back.svg'
 import NewsSection from '../../Components/NewsSection/NewsSection'
 import ButtonBackToTop from '../../Components/ButtonBackToTop/ButtonBackToTop'
-import NavBar from '../../Components/NavBar/NavBar'
+
 
 export default function HomePage() {
   return (
 
     <>
-      <div className="containerHome">
+      <div className="containerHome hidden md:block">
         <img data-testid="background-img" src={background} alt="imagen" />
       </div>
       <div data-testid="header-component">

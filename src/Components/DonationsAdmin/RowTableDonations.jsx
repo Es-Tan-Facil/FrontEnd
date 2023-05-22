@@ -64,8 +64,8 @@ function RowTableDonations({ donation }) {
 
   return (
     <>
-      <tr className="bg-white border-b dark:bg-[#38B5FF] dark:border-[#38B5FF] text-[1rem]">
-        <td className="border border-[#38B5FF] w-60 pl-3">
+      <tr className="bg-white border-b dark:bg-[#51C8FC] dark:border-[#51C8FC] text-[1rem]">
+        <td className="border border-[#51C8FC] w-60 pl-3">
           {editing ? (
             <input
               type="text"
@@ -76,7 +76,7 @@ function RowTableDonations({ donation }) {
             showUpdatedData ? editedData.name : donation.name
           )}
         </td>
-        <td className="border border-[#38B5FF] w-60 pl-3">
+        <td className="border border-[#51C8FC] w-60 pl-3">
           {editing ? (
             <input
               type="text"
@@ -91,13 +91,13 @@ function RowTableDonations({ donation }) {
           {editing ? (
             <>
               <button
-                className="mr-2 bg-[#38B5FF] hover:bg-[#FFDD59] text-white font-semibold ml-4 mt-2 py-1 px-2 rounded"
+                className="mr-2 bg-[#51C8FC] hover:bg-[#FFDD59] text-white font-semibold ml-4 mt-2 py-1 px-2 rounded"
                 onClick={handleSave}
               >
                 Guardar
               </button>
               <button
-                className="bg-[#FFDD59] hover:bg-[#38B5FF] text-white font-semibold py-1 px-2 rounded"
+                className="bg-[#FFDD59] hover:bg-[#51C8FC] text-white font-semibold py-1 px-2 rounded"
                 onClick={handleCancel}
               >
                 Cancelar
@@ -106,13 +106,13 @@ function RowTableDonations({ donation }) {
           ) : (
             <>
               <button
-                className="mr-2 bg-[#38B5FF] hover:bg-[#FFDD59] text-white font-semibold ml-4 mt-2 py-1 px-2 rounded"
+                className="mr-2 bg-[#51C8FC] hover:bg-[#FFDD59] text-white font-semibold ml-4 mt-2 py-1 px-2 rounded"
                 onClick={handleEdit}
               >
                 Editar
               </button>
               <button
-                className="bg-[#FFDD59] hover:bg-[#38B5FF] text-white font-semibold py-1 px-2 rounded"
+                className="bg-[#FFDD59] hover:bg-[#51C8FC] text-white font-semibold py-1 px-2 rounded"
                 onClick={handleDelete}
               >
                 Eliminar

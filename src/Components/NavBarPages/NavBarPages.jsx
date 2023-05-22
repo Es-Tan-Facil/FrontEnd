@@ -24,7 +24,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal"
+        className="p-1 font-normal text-base md:text-lg lg:text-xl hover:translate-y-1 hover:transition-all duration-300"
       >
         <Link
           className="flex items-center cursor-pointer"
@@ -39,7 +39,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal"
+        className="p-1 font-normal text-base md:text-lg lg:text-xl hover:translate-y-1 hover:transition-all duration-300"
       >
         <Link
           className="flex items-center cursor-pointer"
@@ -54,7 +54,7 @@ React.useEffect(() => {
         as="li"
         variant="h5"
         color="black"
-        className="p-1 font-normal"
+        className="p-1 font-normal text-base md:text-lg lg:text-xl hover:translate-y-1 hover:transition-all duration-300"
       >
         <Link
           className="flex items-center cursor-pointer"
@@ -75,7 +75,7 @@ React.useEffect(() => {
       <Navbar className="relative shadow-none inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
         <div className="flex items-start justify-between text-blue-gray-900">
           <NavLink to={"/"}><img
-            className="mr-4 h-28 cursor-pointer "
+            className="mr-4 md:h-28 h-14 cursor-pointer "
             src={Logo}
             alt="Logo"
 

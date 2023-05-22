@@ -37,9 +37,9 @@ function HTTPDonationService () {
     return response.data;
 
   };
-  const getSumKmDonated = async () => {
+  const getTotalKms = async () => {
     
-      const response = await axios.get(`${url}`, { headers:{ "Authorization": AuthHeader() }});
+      const response = await axios.get(`${url}/total-kms-donated`);
       return response.data;
     
   };
@@ -49,7 +49,7 @@ function HTTPDonationService () {
     createDonation,
     updateDonation,
     deleteDonation,
-    getSumKmDonated,
+    getTotalKms,
     url
 
   };

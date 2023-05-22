@@ -15,28 +15,27 @@ function AdminPage() {
   
   return (
     <>
-      
-      
+
+
       <div data-testid="navbar-component">
         <NavBarPages />
       </div>
-      <div className="flex mx-auto">
-        <div className="w-1/2 mr-4" data-testid="news-form-component">
+      <div className="flex flex-wrap md:flex-nowrap mt-10">
+        <div className=" w-5/6 mx-auto" data-testid="news-form-component">
           <NewsForm />
         </div>
-        <div className="w-1/2 ml-4">
+        <div className="w-5/6 mx-auto">
           <DonationForm />
         </div>
-        
       </div>
-      <div>
+      <div className='flex justify-center w-5/6 mx-auto'>
         <DonationsAdmin />
       </div>
       <div>
         <NewsAdmin />
       </div>
 
-    
+
     </>
   )
 }

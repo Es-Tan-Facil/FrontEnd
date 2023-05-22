@@ -72,11 +72,11 @@ function NewsAdmin() {
 
 
   return (
-    <div id="NewsAdmin" className=" flex flex-col items-center">
-      <Title title="Últimas Noticias" />
-      <div className="flex flex-wrap gap-12">
+    <div id="NewsAdmin" className=" flex flex-col items-center w-4/5 md:w-2/5 mx-auto mb-10">
+      <Title title="Noticias" />
+      <div className="flex flex-wrap gap-12 mt-10">
         {cards.reverse().map((card) => (
-          <div key={card.id}>
+          <div className="border-4 border-[#51C8FC] p-5 rounded-tl-none rounded-br-none rounded-tr-3xl rounded-bl-3xl" key={card.id}>
             <img src={card.urlImg} alt={card.title} className="w-48 h-48 object-cover" />
             {editMode && editedCard && editedCard.id === card.id ? (
               <>
@@ -99,21 +99,21 @@ function NewsAdmin() {
               <>
                 <button
                   onClick={handleSave}
-                  className="mr-2 bg-green-500 hover:bg-green-700 text-white font-semibold py-1 px-2 rounded">Save
+                  className="mr-2 bg-green-500 hover:bg-green-700 text-white font-semibold py-1 px-2 rounded">Guardar
                 </button>
                 <button
                   onClick={handleCancel}
-                  className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Cancel
+                  className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Cancelar
                 </button>
               </>
             ) : (
               <button
                 onClick={() => handleEdit(card)}
-                className="mr-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded">Edit
+                className="mr-2 bg-[#51C8FC] hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded">Editar
               </button>
             )}
             <button onClick={() => handleDelete(card.id)}
-              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Delete
+              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Borrar
             </button>
           </div>
         ))}

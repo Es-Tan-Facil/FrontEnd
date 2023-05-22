@@ -24,8 +24,8 @@ function DonationsAdmin() {
   return (
     <div className="bg-white my-10 flex">
       <div className="container mx-auto">
-        <table className="text-sm text-left text-black">
-          <thead className="text-lg text-white uppercase bg-[#38B5FF]">
+        <table class=" text-sm text-left text-black">
+          <thead class="text-lg text-white uppercase bg-[#51C8FC]">
             <tr>
               <th scope="col" className="py-3 pl-3">
                 Nombre
