@@ -2,8 +2,10 @@
 Es Tan Fácil es un proyecto que tiene como objetivo ayudar a las escuelas rurales del valle proporcionándoles útiles escolares y llevando a los niños a conocer nuevos lugares. Este proyecto tiene su sede en San Luis, Argentina y es llevado a cabo de manera autónoma por su fundador, Carlos Castro. Se busca la colaboración de personas y empresas para lograr el éxito de esta iniciativa. Este proyecto fue llevado a cabo por alumnos de Factoría F5 como proyecto pedagógico final 
 
 El proyecto cuenta con una parte de backend y de frontend, lo que permite una interacción completa con los usuarios y facilita la gestión de los recursos y donaciones.
-
-<blockquote class="imgur-embed-pub" lang="es" data-id="a/qld20s9" data-context="false" ><a href="//imgur.com/a/qld20s9"></a></blockquote><script async src="https://imgur.com/a/qld20s9" charset="utf-8"></script>
+<div style="display: flex; flex-direction: row;">
+<img  src='https://i.postimg.cc/8zgMhFbK/mobile-7.png' border='0' alt='EsTanFacil'/> 
+<img  src='https://i.postimg.cc/VLxpnFTx/mobile.gif' border='0' alt='EsTanFacil'/> 
+</div>
 
 ## Características principales
 
