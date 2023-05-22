@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HTTPDonationService from '../../Services/HTTPDonationService';
 
 function RowTableDonations({ donation }) {
@@ -17,6 +17,24 @@ function RowTableDonations({ donation }) {
     }
   };
 
+ 
+  useEffect(() => {
+    if (showUpdatedData) {
+      setEditedData(null); 
+      HTTPDonationService()
+        .getDonationById(donation.id)
+        .then((updatedData) => {
+          setEditedData(updatedData);
+        })
+        .catch(console.error);
+    }
+  }, [showUpdatedData]);
+
+  if (!editedData) {
+    return null; 
+  }
+
+  
   const handleEdit = () => {
     setEditing(true);
     setEditedData({ ...donation });
