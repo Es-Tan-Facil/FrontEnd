@@ -30,7 +30,7 @@ function NewsForm(props) {
         .then(response => {
             setShowAlert(true);
             setAlertMessage('El post se ha creado exitosamente');
-            props.router.navigate("/news");
+            props.router.navigate("/admin");
         })
         .catch(error => {
             setShowAlert(true);
@@ -43,7 +43,7 @@ function NewsForm(props) {
 
     return (
 
-        <div className="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div className="max-w-md mx-auto bg-white border-4 border-blue-500 shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <h2 className="text-xl mb-4 font-bold">Escribe Tu Post</h2>
             {showAlert && <Alert color={alertMessage.includes('Error') ? 'red' : 'blue'}>{alertMessage}</Alert>}
             <form onSubmit={handleSubmit}>
@@ -59,11 +59,11 @@ function NewsForm(props) {
                     <InputPhoto setUrlImg={setUrlImg} />
                 </div>
                 <div className="mb-4">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" content='Enviar' icon='like'>Enviar</button>
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="submit" content='Enviar' icon='like'>Enviar</button>
 
                 </div>
                 <div className="flex items-center justify-between">
-                    <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Cancelar</button>
+                    <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="button">Cancelar</button>
                 </div>
             </form>
            

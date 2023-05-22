@@ -3,6 +3,7 @@ import NewsForm from '../../Components/NewsForm/NewsForm'
 import NavBarPages from '../../Components/NavBarPages/NavBarPages'
 import DonationForm from '../../Components/DonationForm/DonationForm'
 import NewsAdmin from '../../Components/NewsAdmin/NewsAdmin'
+import DonationsAdmin from '../../Components/DonationsAdmin/DonationsAdmin'
 
 
 
@@ -21,10 +22,16 @@ function AdminPage() {
         <div className="w-1/2 ml-4">
           <DonationForm />
         </div>
+        
+      </div>
+      <div>
+        <DonationsAdmin />
       </div>
       <div>
         <NewsAdmin />
       </div>
+
+    
     </>
   )
 }
