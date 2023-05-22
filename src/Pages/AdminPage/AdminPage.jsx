@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NewsForm from '../../Components/NewsForm/NewsForm'
 import NavBarPages from '../../Components/NavBarPages/NavBarPages'
 import DonationForm from '../../Components/DonationForm/DonationForm'
@@ -10,7 +10,7 @@ import DonationsAdmin from '../../Components/DonationsAdmin/DonationsAdmin'
 function AdminPage() {
 
 
-
+const [reload, setReload] = useState([])
 
   
   return (
@@ -25,11 +25,11 @@ function AdminPage() {
           <NewsForm />
         </div>
         <div className="w-5/6 mx-auto">
-          <DonationForm />
+          <DonationForm  setReload={setReload}/>
         </div>
       </div>
       <div className='flex justify-center w-5/6 mx-auto'>
-        <DonationsAdmin />
+        <DonationsAdmin reload={reload} setReload={setReload}/>
       </div>
       <div>
         <NewsAdmin />

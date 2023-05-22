@@ -4,7 +4,7 @@ import { Alert } from "@material-tailwind/react";
 
 
 
-function DonationForm() {
+function DonationForm({ setReload }) {
     const [name, setName] = useState('');
     const [km, setKm] = useState('');
     const [showAlert, setShowAlert] = useState(false);
@@ -30,15 +30,14 @@ function DonationForm() {
                 setShowAlert(true);
                 setAlertMessage('Se ha añadido correctamente.');
                 setName('');
-        setKm('');
-
-
+                setKm('');
             })
             .catch(error => {
                 setShowAlert(true);
                 setAlertMessage('Error al crear el post');
             });
-       
+        setReload(true)
+
     }
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -73,7 +72,7 @@ function DonationForm() {
                     <button className="bg-[#51C8FC] hover:bg-[#FFDD59] text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="submit" content='Enviar' icon='like'>Enviar</button>
                 </div>
                 <div className="flex items-center justify-between">
-                    <button className="bg-[#FFDD59] hover:bg-[#51C8FC] text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="button">Cancelar</button>
+                    <button className="bg-[#FFDD59] hover:bg-[#51C8FC] text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline" type="button" onClick={handleCancel}>Cancelar</button>
                 </div>
             </form>
 

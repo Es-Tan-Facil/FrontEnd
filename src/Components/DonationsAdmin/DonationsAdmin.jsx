@@ -3,7 +3,7 @@ import RowTableDonations from './RowTableDonations';
 import HTTPDonationService from '../../Services/HTTPDonationService';
 
 
-function DonationsAdmin() {
+function DonationsAdmin({reload,setReload}) {
   const [donations, setDonations] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,10 @@ function DonationsAdmin() {
     }
   };
 
-
+if (reload){
+  fetchDonations();
+setReload(false);
+}
 
   return (
     <div className="bg-white my-10 flex">
