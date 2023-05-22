@@ -99,21 +99,21 @@ function NewsAdmin() {
               <>
                 <button
                   onClick={handleSave}
-                  className="mr-2 bg-green-500 hover:bg-green-700 text-white font-semibold py-1 px-2 rounded">Save
+                  className="mr-2 bg-green-500 hover:bg-green-700 text-white font-semibold py-1 px-2 rounded">Guardar
                 </button>
                 <button
                   onClick={handleCancel}
-                  className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Cancel
+                  className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Cancelar
                 </button>
               </>
             ) : (
               <button
                 onClick={() => handleEdit(card)}
-                className="mr-2 bg-[#51C8FC] hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded">Edit
+                className="mr-2 bg-[#51C8FC] hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded">Editar
               </button>
             )}
             <button onClick={() => handleDelete(card.id)}
-              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Delete
+              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Borrar
             </button>
           </div>
         ))}
