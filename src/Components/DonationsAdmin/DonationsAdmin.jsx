@@ -22,7 +22,7 @@ function DonationsAdmin() {
     <div className="bg-white my-10 flex ">
       <div className="container mx-auto">
         <table class=" text-sm text-left text-black">
-          <thead class="text-lg text-white uppercase bg-[#38B5FF]">
+          <thead class="text-lg text-white uppercase bg-[#51C8FC]">
             <tr>
               <th scope="col" class="py-3 pl-3">Nombre</th>
               <th scope="col" class="py-3 pl-3">Kms</th>
