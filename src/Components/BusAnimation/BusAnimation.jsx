@@ -47,7 +47,7 @@ const BusAnimation = () => {
           <img src={background} alt="" className='BackgroundImg ' /> 
       </div > 
       
-      <div className="sub_div md:bottom-8 ">
+      <div className="sub_div">
         <img src={bus} alt="" className='BusImg' style={{ transform: `translate(${posX}vw)` }} />
       </div>
     </div>

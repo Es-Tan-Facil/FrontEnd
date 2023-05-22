@@ -18,10 +18,8 @@ function HTTPService () {
   
 
   const createData = async (data) => {
-    console.log(data);
     
     const response = await axios.post(`${url}`,data, {headers:{"Content-Type" : "application/json",  "Authorization":  AuthHeader() }});
-  
     return response.data;
 
   };

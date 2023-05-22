@@ -16,7 +16,7 @@ export default function CardSchoolMaterial() {
 
     return (
 
-        <Card onClick={handleOpen} className="mt-6 h-80 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#51C8FC] cursor-pointer">
+        <Card onClick={handleOpen} className="mt-6 h-80 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#51C8FC] cursor-pointer hover:border-[#FFDD59] hover:shadow-lg hover:translate-y-1 hover:transition-all duration-300">
             <CardBody>
                 <Typography variant="h5" color="black" className="mb-2 text-center">
                     Material escolar
