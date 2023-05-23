@@ -84,7 +84,7 @@ function NewsAdmin({ setReload, reload }) {
       <StainTitle />
       <div className="flex flex-wrap gap-12 mt-10">
         {cards.reverse().map((card) => (
-          <div className="border-4 border-[#51C8FC] p-5 rounded-tl-none rounded-br-none rounded-tr-3xl rounded-bl-3xl" key={card.id}>
+          <div className="border-4 border-[#51C8FC] p-5 rounded-tl-none rounded-br-none rounded-tr-3xl rounded-bl-3xl min-w-[100%]" key={card.id}>
             <img src={card.urlImg} alt={card.title} className="w-48 h-48 object-cover" />
             {editMode && editedCard && editedCard.id === card.id ? (
               <>
