@@ -25,7 +25,7 @@ export default function ContactSocial() {
                     target="_blank"
                     rel="noopener noreferrer" >
                     <Card
-                        className="mt-6 h-60 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#51C8FC] cursor-pointer"
+                        className="mt-6 h-60 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#51C8FC] cursor-pointer hover:border-[#FFDD59] hover:shadow-lg hover:translate-y-1 hover:transition-all duration-300"
                         title="Ir a Facebook"
                     >
                         <CardBody>
@@ -41,7 +41,7 @@ export default function ContactSocial() {
                     target="_blank"
                     rel="noopener noreferrer">
                     <Card
-                        className="mt-6 h-60 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#51C8FC] cursor-pointer"
+                        className="mt-6 h-60 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#51C8FC] cursor-pointer hover:border-[#FFDD59] hover:shadow-lg hover:translate-y-1 hover:transition-all duration-300"
                         title="Ir a Instagram"
                     >
                         <CardBody>
@@ -57,7 +57,7 @@ export default function ContactSocial() {
                     target="_blank"
                     rel="noopener noreferrer">
                     <Card
-                        className="mt-6 h-60 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#51C8FC] cursor-pointer"
+                        className="mt-6 h-60 w-72 rounded-none rounded-tr-3xl rounded-bl-3xl border-solid border-2 border-[#51C8FC] cursor-pointer hover:border-[#FFDD59] hover:shadow-lg hover:translate-y-1 hover:transition-all duration-300"
                         title="Ir a WhatsApp"
                     >
                         <CardBody>
