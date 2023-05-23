@@ -31,6 +31,10 @@ function NewsAdmin({ setReload, reload }) {
 
   const handleDelete = async (cardId) => {
     try {
+      const confirmDelete = window.confirm("¿Está seguro de que desea eliminar este elemento?");
+      if (!confirmDelete) {
+        return; 
+      }
       const response = await HTTPService().deleteData(cardId);
       setCards(cards.filter((card) => card.id !== cardId));
       console.log(response);
@@ -126,7 +130,7 @@ function NewsAdmin({ setReload, reload }) {
               </button>
             )}
             <button onClick={() => handleDelete(card.id)}
-              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Borrar
+              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded">Eliminar
             </button>
           </div>
         ))}
