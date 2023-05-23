@@ -41,7 +41,7 @@ function DonationsAdmin({reload,setReload}) {
           </thead>
           <tbody>
             {donations.map((donation) => (
-              <RowTableDonations key={donation.id} donation={donation} />
+              <RowTableDonations key={donation.id} donation={donation} setReload={setReload} />
             ))}
           </tbody>
         </table>

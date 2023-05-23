@@ -22,7 +22,7 @@ const [reload, setReload] = useState(false)
       </div>
       <div className="flex flex-wrap md:flex-nowrap mt-10">
         <div className=" w-5/6 mx-auto" data-testid="news-form-component">
-          <NewsForm />
+          <NewsForm setReload={setReload}/>
         </div>
         <div className="w-5/6 mx-auto">
           <DonationForm  setReload={setReload}/>

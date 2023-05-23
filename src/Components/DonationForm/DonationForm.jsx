@@ -27,6 +27,7 @@ function DonationForm({ setReload }) {
 
         HTTPDonationService().createDonation(data)
             .then(response => {
+                setReload(true);
                 setShowAlert(true);
                 setAlertMessage('Se ha añadido correctamente.');
                 setName('');
@@ -36,7 +37,7 @@ function DonationForm({ setReload }) {
                 setShowAlert(true);
                 setAlertMessage('Error al crear el post');
             });
-        setReload(true)
+        
 
     }
     useEffect(() => {

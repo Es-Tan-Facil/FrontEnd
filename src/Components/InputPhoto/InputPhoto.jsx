@@ -44,10 +44,10 @@ function InputPhoto({setUrlImg, value}) {
 
     return (
         <div>
-            <textarea onChange={(e)=> setUrlImg(e.target.value)} name= "urlImg" value={value || base64} required className="form-control" placeholder="Añade una foto"
-                                id="photo"/>
-        <input type="file" onChange={handleFileChange} />
-        </div>
+        <textarea onChange={(e)=> setUrlImg(e.target.value)} name= "urlImg" value={value || base64} required className="appearance-none border border-[#51C8FC] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Añade una foto"
+                            id="photo"/>
+    <input className="w-full" type="file" onChange={handleFileChange} />
+    </div>
     );
 }
 

@@ -8,7 +8,21 @@ import StainTitle from '../Stain/StainTitle'
 
 
 
-export default function WhoAreWe() {  
+export default function WhoAreWe() { 
+    const description = <React.Fragment><br/>Somos un grupo de amigos, que aunando voluntades, tenemos como objetivo llevar a chicos de parajes rurales (Valle del Conlara, Provincia de San Luis), por medio de sus escuelas a que conozcan el mar.<br/>
+
+    NO somos una ONG, NO somos una Fundación, NO tenemos personería jurídica, NO respondemos a ninguna entidad política, ni nos identificamos con ellas.
+    Todo es a base de voluntad, a base de confianza.<br/>
+    
+    Llevamos desde 2006 cumpliendo sueños; ya son 12 los viajes que hemos realizado gracias a la participación de tantos.
+    Nuestra página de Facebook “Campaña Es tan Fácil“, es el testimonio fiel de todo lo que fuimos concretando.<br/>
+    
+    La campaña es de todos aquellos que suman su voluntad.
+    Sin formas, somos un espíritu de voluntades.
+    
+    Por eso...
+    
+    SIEMPRE GRACIAS.</React.Fragment>
     return (
         <div id= "WhoAreWe" className=" h-auto md:h-[100vh] flex justify-center items-center flex-row flex-wrap gap-14 py-4">
             <div id= "imageWho" >
@@ -18,10 +32,7 @@ export default function WhoAreWe() {
                 <Subtitle subtitle="Es Tan Fácil" />
                 <Title title="Quiénes somos" />
                 <StainTitle />
-                <Text text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
-                a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. But also the leap into electronic typesetting, remaining essentially unchanged. 
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
-                versions of Lorem Ipsum." />
+                <Text text={description} />
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import HTTPDonationService from '../../Services/HTTPDonationService';
 
-function RowTableDonations({ donation }) {
+function RowTableDonations({ donation, setReload }) {
   const [editing, setEditing] = useState(false);
   const [editedData, setEditedData] = useState({ ...donation });
   const [showUpdatedData, setShowUpdatedData] = useState(false);
@@ -12,6 +12,7 @@ function RowTableDonations({ donation }) {
       HTTPDonationService()
         .deleteDonation(donation.id)
         .then(() => {
+          setReload(true);
           setShowUpdatedData(true);
         })
         .catch(console.error);
@@ -46,6 +47,7 @@ function RowTableDonations({ donation }) {
     HTTPDonationService()
       .updateDonation(donation.id, editedData)
       .then(() => {
+        setReload(true);
         setEditing(false);
         setShowUpdatedData(true);
         return HTTPDonationService().getDonationById(donation.id);

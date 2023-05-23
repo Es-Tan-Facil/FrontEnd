@@ -5,7 +5,7 @@ import { Alert } from "@material-tailwind/react";
 import { WithRouter } from '../../Common/WithRouter';
 
 
-function NewsForm(props) {
+function NewsForm( {setReload}) {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [urlImg, setUrlImg] = useState('');
@@ -16,6 +16,7 @@ function NewsForm(props) {
     
 
     const handleSubmit = (event) => {
+        event.preventDefault();
         
         const data = {
             title: title,
@@ -28,9 +29,10 @@ function NewsForm(props) {
 
         HTTPService().createData(data)
         .then(response => {
+            setReload (true);
             setShowAlert(true);
             setAlertMessage('El post se ha creado exitosamente');
-            props.router.navigate("/admin");
+            
         })
         .catch(error => {
             setShowAlert(true);
@@ -49,11 +51,11 @@ function NewsForm(props) {
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                     <label className="block text-gray-700 font-bold mb-2" htmlFor="title">Título</label>
-                    <input onChange={(event) => { setTitle(event.target.value) }} className="appearance-none border rounded border-[#51C8FC] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Ingresa el título" autoFocus />
+                    <input onChange={(event) => { setTitle(event.target.value) }} className="appearance-none border rounded border-[#51C8FC] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" required placeholder="Ingresa el título" autoFocus />
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 font-bold mb-2" htmlFor="description">Descripción</label>
-                    <textarea onChange={(event) => { setDescription(event.target.value) }} rows={7} className="appearance-none border border-[#51C8FC] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="description" placeholder="Cuéntanos tu experiencia..." />
+                    <textarea onChange={(event) => { setDescription(event.target.value) }} rows={7} className="appearance-none border border-[#51C8FC] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" required id="description" placeholder="Cuéntanos tu experiencia..." />
                 </div>
                 <div className="mb-4">
                     <InputPhoto setUrlImg={setUrlImg} />
