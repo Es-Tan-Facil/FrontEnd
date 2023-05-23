@@ -135,7 +135,7 @@ function NewsAdmin({ setReload, reload }) {
           </div>
         ))}
       </div>
-      <div className="flex justify-center mb-10 md:mt-4">
+      <div className="flex justify-center mb-10 mt-5">
         <button
           onClick={handlePreviousPage}
           disabled={currentPage === 1}
