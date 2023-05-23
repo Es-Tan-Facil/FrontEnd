@@ -1,11 +1,11 @@
 import React from 'react'
 import './HomePage.css'
-import DonationCards from '../../Components/DonationCards/DonationCards'
+import DonationCards from '../../Components/DonationComponents/DonationCards/DonationCards'
 import WhoAreWe from '../../Components/WhoAreWe/WhoAreWe'
 import OurTrip from '../../Components/OurTrip/OurTrip'
-import Header from '../../Components/Header/Header'
+import Header from '../../Components/HeaderComponents/Header/Header'
 import BusAnimation from '../../Components/BusAnimation/BusAnimation'
-import NewsSection from '../../Components/NewsSection/NewsSection'
+import NewsSection from '../../Components/NewsComponents/NewsSection/NewsSection'
 import ButtonBackToTop from '../../Components/ButtonBackToTop/ButtonBackToTop'
 
 

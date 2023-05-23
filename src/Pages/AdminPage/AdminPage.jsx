@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import NewsForm from '../../Components/NewsForm/NewsForm'
-import NavBarPages from '../../Components/NavBarPages/NavBarPages'
-import DonationForm from '../../Components/DonationForm/DonationForm'
-import NewsAdmin from '../../Components/NewsAdmin/NewsAdmin'
-import DonationsAdmin from '../../Components/DonationsAdmin/DonationsAdmin'
+import NewsForm from '../../Components/NewsComponents/NewsForm/NewsForm'
+import NavBarPages from '../../Components/NavBarsComponents/NavBarPages/NavBarPages'
+import DonationForm from '../../Components/DonationComponents/DonationForm/DonationForm'
+import NewsAdmin from '../../Components/NewsComponents/NewsAdmin/NewsAdmin'
+import DonationsAdmin from '../../Components/DonationComponents/DonationsAdmin/DonationsAdmin'
 
 
 

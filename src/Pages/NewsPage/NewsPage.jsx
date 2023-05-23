@@ -1,7 +1,7 @@
 import React from 'react'
 import ButtonBackToTop from '../../Components/ButtonBackToTop/ButtonBackToTop'
-import News from '../../Components/News/News'
-import HeaderPages from '../../Components/HeaderPages/HeaderPages'
+import News from '../../Components/NewsComponents/News/News'
+import HeaderPages from '../../Components/HeaderComponents/HeaderPages/HeaderPages'
 
 export default function NewsPage() {
     return (

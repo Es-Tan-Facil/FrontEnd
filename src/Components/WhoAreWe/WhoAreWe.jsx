@@ -1,10 +1,10 @@
 import React from 'react'
-import Title from '../Title/Title'
-import Subtitle from '../Subtitle/Subtitle'
-import Text from '../Text/Text'
+import Title from '../TextComponents/Title/Title'
+import Subtitle from '../TextComponents/Subtitle/Subtitle'
+import Text from '../TextComponents/Text/Text'
 import somos from "../../Assets/Pictures/burbuja.svg"
 import './WhoAreWe.css'
-import StainTitle from '../Stain/StainTitle'
+import StainTitle from '../TextComponents/StainTitle/StainTitle'
 
 
 

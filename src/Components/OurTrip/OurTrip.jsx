@@ -1,9 +1,9 @@
 import React from 'react'
-import Title from '../Title/Title'
-import Text from '../Text/Text'
+import Title from '../TextComponents/Title/Title'
+import Text from '../TextComponents/Text/Text'
 import './OurTrip.css'
 import Map from '../../Assets/Pictures/mapa.svg'
-import StainTitle from '../Stain/StainTitle'
+import StainTitle from '../TextComponents/StainTitle/StainTitle'
 import background from '../../Assets/Pictures/mapa_back.svg'
 
 

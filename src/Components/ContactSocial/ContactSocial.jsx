@@ -1,8 +1,8 @@
 import React from 'react'
-import Title from '../Title/Title'
+import Title from '../TextComponents/Title/Title'
 import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { Card, CardBody, Typography } from "@material-tailwind/react";
-import StainTitle from "../Stain/StainTitle"
+import StainTitle from "../TextComponents/StainTitle/StainTitle"
 
 export default function ContactSocial() {
     
