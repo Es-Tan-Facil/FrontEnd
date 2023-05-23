@@ -9,6 +9,8 @@ function NewsAdmin({ setReload, reload }) {
   const [editMode, setEditMode] = useState(false);
   const [editedCard, setEditedCard] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const perPage = 4;
 
   useEffect(() => {
     async function fetchNews() {
@@ -21,9 +23,9 @@ function NewsAdmin({ setReload, reload }) {
     }
 
     fetchNews();
-    if(reload){
+    if (reload) {
 
-    setReload(false)
+      setReload(false)
     }
   }, [reload, setReload]);
 
@@ -76,6 +78,15 @@ function NewsAdmin({ setReload, reload }) {
     }));
   };
 
+  const startIndex = (currentPage - 1) * perPage;
+
+  const handlePreviousPage = () => {
+    setCurrentPage(currentPage - 1);
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage(currentPage + 1);
+  };
 
 
   return (
@@ -83,7 +94,7 @@ function NewsAdmin({ setReload, reload }) {
       <Title title="Noticias" />
       <StainTitle />
       <div className="flex flex-wrap gap-12 mt-10">
-        {cards.reverse().map((card) => (
+      {cards.slice(startIndex, startIndex + perPage).map((card) => (
           <div className="border-4 border-[#51C8FC] p-5 rounded-tl-none rounded-br-none rounded-tr-3xl rounded-bl-3xl min-w-[100%]" key={card.id}>
             <img src={card.urlImg} alt={card.title} className="w-48 h-48 object-cover" />
             {editMode && editedCard && editedCard.id === card.id ? (
@@ -120,6 +131,22 @@ function NewsAdmin({ setReload, reload }) {
           </div>
         ))}
       </div>
+      <div className="flex justify-center mb-10 md:mt-4">
+        <button
+          onClick={handlePreviousPage}
+          disabled={currentPage === 1}
+          className="px-2 py-1 rounded-md bg-[#51C8FC] text-white mr-2"
+        >
+          Anterior
+        </button>
+        <button
+          onClick={handleNextPage}
+          disabled={startIndex + perPage >= cards.length}
+          className="px-2 py-1 rounded-md bg-[#51C8FC] text-white"
+        >
+          Siguiente
+        </button>
+      </div>
       <EditModal
         showModal={showModal}
         setShowModal={setShowModal}
@@ -130,6 +157,7 @@ function NewsAdmin({ setReload, reload }) {
         handleInputChange={handleInputChange}
 
       />
+
     </div>
   );
 }
