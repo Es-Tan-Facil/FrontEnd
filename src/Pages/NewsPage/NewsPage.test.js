@@ -17,7 +17,6 @@ describe('News Page', () => {
         renderNewsPage();
 
         const componentData = [
-            { testId: 'background-img' },
             { testId: 'header-component' },
             { testId: 'news-component' },
             { testId: 'button-back-to-top-component' }

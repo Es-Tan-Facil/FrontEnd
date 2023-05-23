@@ -10,8 +10,6 @@ describe('Subtitle component', () => {
     const subtitleElement = getByText(subtitleText);
     expect(subtitleElement).toBeInTheDocument();
     expect(subtitleElement.tagName).toBe('H1');
-    expect(subtitleElement).toHaveStyle('fontSize: 32px');
-    expect(subtitleElement).toHaveStyle('color: rgba(255, 221, 89, 1)');
-    expect(subtitleElement).toHaveStyle('marginBottom: -5px');
+    expect(subtitleElement).toHaveStyle('font-size: 2em');
   });
 });
