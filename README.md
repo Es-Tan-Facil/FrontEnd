@@ -1,5 +1,6 @@
 # Es tan fácil
 La "Campaña Es Tan Fácil" es un proyecto conformado por un grupo de amigos, que tiene como objetivo ayudar a los chicos de las escuelas rurales del valle del Bajo de Véliz dándoles la oportunidad de conocer el mar. Este proyecto tiene su sede en San Luis, Argentina y es llevado a cabo de manera autónoma por su fundador, Carlos Castro, junto a otros voluntarios. Se busca constantemente la colaboración de personas y empresas para lograr el éxito de esta iniciativa. 
+
 La página web "Es Tan Fácil" nace como un proyecto voluntario y altruista, con el objetivo de dar visibilidad a la campaña y fomentar la colaboración. Cuenta con un diseño llamativo y colorido, donde las diversas secciones se integran dentro de la página principal, a los cuales puedes acceder a través de la barra de navegación. También hay otras dos vistas: la de noticias y la de contacto. El desarrollo de la página fue realizado mediante React, donde se hizo uso de Axios, para facilitar la conexión con el back-end, y de Tailwind, como biblioteca de recursos, y Java Spring Boot y Spring Security, con el objetivo de tener una página web dinámica que nos permitiera gestionar nuestra base de datos. 
 
 El proyecto cuenta con una parte de backend y de frontend, lo que permite una interacción completa con los usuarios y facilita la gestión de los recursos y donaciones.
