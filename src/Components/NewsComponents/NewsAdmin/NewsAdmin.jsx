@@ -3,6 +3,7 @@ import HTTPService from '../../../Services/HTTPService.jsx';
 import Title from '../../TextComponents/Title/Title.jsx';
 import EditModal from './EditModal.jsx';
 import StainTitle from '../../TextComponents/StainTitle/StainTitle.jsx';
+import { compareDesc } from 'date-fns';
 
 function NewsAdmin({ setReload, reload }) {
   const [cards, setCards] = useState([]);
@@ -11,12 +12,19 @@ function NewsAdmin({ setReload, reload }) {
   const [showModal, setShowModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const perPage = 4;
+  
 
   useEffect(() => {
     async function fetchNews() {
       try {
         const response = await HTTPService().getAllData();
-        setCards(response);
+       
+
+        const sortedCards = response.sort((a, b) =>
+          compareDesc(new Date(a.date), new Date(b.date))
+        );
+
+        setCards(sortedCards);
       } catch (error) {
         console.error(error);
       }
