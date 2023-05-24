@@ -30,7 +30,7 @@ export default function CardSchoolMaterial() {
                     className="!w-4/5 min-w-[60%] max-w-[60%]"
                 >
                     <DialogHeader>Material escolar</DialogHeader>
-                    <DialogBody divider>"Sé parte del cambio.Un lápiz, una sonrisa. Dona material escolar, cambia vidas. ¡Únete a nosotros hoy!"</DialogBody>
+                    <DialogBody divider>"Sé parte del cambio. Un lápiz, una sonrisa. Dona material escolar, cambia vidas. ¡Únete a nosotros hoy!"</DialogBody>
                     <DialogFooter>
                         <div
                             className="absolute top-2 right-2 cursor-pointer"

@@ -30,7 +30,7 @@ export default function CardSchool() {
                     className="!w-4/5 min-w-[60%] max-w-[60%]"
                 >
                     <DialogHeader>Apadrina una escuela</DialogHeader>
-                    <DialogBody divider>Apadrina una escuela!! Quieres donar material deportivo o juegos al aire libre? Transforma vidas a través del deporte!!</DialogBody>
+                    <DialogBody divider>¡Apadrina una escuela! ¿Quieres donar material deportivo o juegos al aire libre? ¡Transforma vidas a través del deporte!</DialogBody>
                     <DialogFooter>
                         <div
                             className="absolute top-2 right-2 cursor-pointer"
