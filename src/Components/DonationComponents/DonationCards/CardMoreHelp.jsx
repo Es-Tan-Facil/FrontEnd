@@ -30,8 +30,7 @@ export default function CardMoreHelp() {
                     className="!w-4/5 min-w-[60%] max-w-[60%]"
                 >
                     <DialogHeader>Más ayuda</DialogHeader>
-                    <DialogBody divider>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</DialogBody>
+                    <DialogBody divider>"¿Se te ocurre otra forma de contribuir y colaborar con nosotros? Escríbenos y juntos crearemos un impacto duradero. Tu ayuda hace la diferencia."</DialogBody>
                     <DialogFooter>
                         <div
                             className="absolute top-2 right-2 cursor-pointer"
