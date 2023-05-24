@@ -30,8 +30,7 @@ export default function CardSchool() {
                     className="!w-4/5 min-w-[60%] max-w-[60%]"
                 >
                     <DialogHeader>Apadrina una escuela</DialogHeader>
-                    <DialogBody divider>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</DialogBody>
+                    <DialogBody divider>Apadrina una escuela!! Quieres donar material deportivo o juegos al aire libre? Transforma vidas a través del deporte!!</DialogBody>
                     <DialogFooter>
                         <div
                             className="absolute top-2 right-2 cursor-pointer"
