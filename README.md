@@ -11,11 +11,11 @@ style="display: block; margin: 0 auto; text-align: center; vertical-align: middl
 
 ## Características principales
 
-- Registro y autenticación de usuarios.
-- Dar a conocer el proyecto
-- Gestión de contacto para donaciones.
-- Organización de excursiones para los niños.
-- Interfaz amigable y de fácil uso.
+- Página principal: dispone de una barra de navegación que permite moverse entre las diversas secciones, una cabecera de diseño propio donde se integran varias imágenes del proyecto Es Tan Fácil, y las propias secciones de: "Colabora con Nostros", donde podemos visualizar cuatro cartas, con un modal, que ofrecen información sobre las formas de colaborar, la sección de "Quiénes somos", donde ofrecemos una breve descripción del proyecto, una sección de "Últimas noticias", donde mostramos, por orden cronológico, las tres últimas noticias publicadas, la sección de "Nuestro viaje", donde ofrecemos una descripción de en qué consiste el viaje, y por último la sección de la animación del autobús, donde, en función de los kilómetros donados, el vehículo avanza. También contamos con un botón que nos permite volver de forma directa a la parte superior de la página web. 
+- Página de noticias: dispone una barra de navegación y un encabezado propio. Cuenta con un sistema de paginación donde mostramos las noticias publicadas. Se puede acceder a través de la barra de navegación de la página principal o mediante el botón de ver más que se encuentra en la sección de "Últimas noticias". 
+- Página de contacto: también dispone de una barra de navegación y un encabezado propio. En esta vista se muestran las diversas formas de contacto: Facebook, Instagram y WhatsApp. 
+- Página de administración para el admin: se trata de un panel de administrador donde el admin podrá incluir nuevas noticias y donaciones mediante formularios. También podrá visualizar los datos de las donaciones realizadas y las noticias publicadas para editarlas o borrarlas. 
+- Página web responsiva en cualquier dispositivo: desktop first. 
 
 ## :hammer_and_wrench: Tools 
 
@@ -25,11 +25,16 @@ style="display: block; margin: 0 auto; text-align: center; vertical-align: middl
 - Visual Studio Code   
 - Intellij
 - Postman
+- Workbench
+- Lucidchart
 
 ## :bulb:Technologíes
 
+- HTML5 
+- CSS3
 - React
-- Material Tailwind  
+- Material Tailwind
+- Axios  
 - Spring Boot 
 - Spring Boot Security  
 
@@ -40,10 +45,13 @@ style="display: block; margin: 0 auto; text-align: center; vertical-align: middl
 2. Asegúrate de tener Node.js y un gestor de bases de datos instalado en tu sistema.
 3. Abre una terminal y navega hasta el directorio del proyecto.
 4. Ejecuta el comando `npm install` para instalar las dependencias del frontend.
-5. Navega hasta el directorio del backend y ejecuta `npm install` para instalar las dependencias del backend.
-6. Inicia el servidor del backend ejecutando `npm start` en el directorio correspondiente.
-7. En otra terminal, inicia la aplicación frontend ejecutando `npm start` en el directorio principal del proyecto.
-8. Accede a la aplicación en tu navegador web ingresando la dirección `http://localhost:3000`.
+5. Instala Workbench, XAMPP, o algún programa de gestión de base de datos MySQL.
+6. Configura el archivo application.properties del back-end con los datos de la configuración de tu servidor.
+7. Navega hasta el directorio del backend y ejecuta el proyecto desde la clase principal. 
+9. En otra terminal, inicia la aplicación front-end ejecutando `npm start` en el directorio principal del proyecto.
+10. Accede a la aplicación en tu navegador web ingresando la dirección `http://localhost:3000`.
+
+## Mock-Up
 
 ## Autores
 
