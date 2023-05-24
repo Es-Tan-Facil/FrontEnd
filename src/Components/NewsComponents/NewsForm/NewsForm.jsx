@@ -21,8 +21,9 @@ function NewsForm({ setReload }) {
       urlImg: urlImg
     };
 
-    event.target.reset();
+   
     inputPhotoRef.current.resetField();
+    handleCancel();
 
     HTTPService().createData(data)
       .then(response => {
