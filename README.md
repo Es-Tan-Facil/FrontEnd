@@ -25,11 +25,16 @@ style="display: block; margin: 0 auto; text-align: center; vertical-align: middl
 - Visual Studio Code   
 - Intellij
 - Postman
+- Workbench
+- Lucidchart
 
 ## :bulb:Technologíes
 
+- HTML5 
+- CSS3
 - React
-- Material Tailwind  
+- Material Tailwind
+- Axios  
 - Spring Boot 
 - Spring Boot Security  
 
@@ -40,10 +45,11 @@ style="display: block; margin: 0 auto; text-align: center; vertical-align: middl
 2. Asegúrate de tener Node.js y un gestor de bases de datos instalado en tu sistema.
 3. Abre una terminal y navega hasta el directorio del proyecto.
 4. Ejecuta el comando `npm install` para instalar las dependencias del frontend.
-5. Navega hasta el directorio del backend y ejecuta `npm install` para instalar las dependencias del backend.
-6. Inicia el servidor del backend ejecutando `npm start` en el directorio correspondiente.
-7. En otra terminal, inicia la aplicación frontend ejecutando `npm start` en el directorio principal del proyecto.
-8. Accede a la aplicación en tu navegador web ingresando la dirección `http://localhost:3000`.
+5. Instala Workbench, XAMPP, o algún programa de gestión de base de datos MySQL.
+6. Configura el archivo application.properties del back-end con los datos de la configuración de tu servidor.
+7. Navega hasta el directorio del backend y ejecuta el proyecto desde la clase principal. 
+9. En otra terminal, inicia la aplicación front-end ejecutando `npm start` en el directorio principal del proyecto.
+10. Accede a la aplicación en tu navegador web ingresando la dirección `http://localhost:3000`.
 
 ## Autores
 
