@@ -51,6 +51,8 @@ style="display: block; margin: 0 auto; text-align: center; vertical-align: middl
 9. En otra terminal, inicia la aplicación front-end ejecutando `npm start` en el directorio principal del proyecto.
 10. Accede a la aplicación en tu navegador web ingresando la dirección `http://localhost:3000`.
 
+## Mock-Up
+
 ## Autores
 
 - [Carlos Sánchez Yerga (Scrum master) ](https://github.com/Holapueblodev)
